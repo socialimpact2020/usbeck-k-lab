@@ -28,11 +28,11 @@ export default function Home() {
       <div className="grid grid-cols-2 max-w-7xl m-auto  mt-10 gap-20">
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
-            <p className="text-lg font-semibold">프로그램</p>
+            <p className="text-lg font-semibold">Programs</p>
 
             <div className="flex items-center space-x-2">
               <Link href="#" className="text-md text-gray-500">
-                더보기
+                More
               </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -59,9 +59,7 @@ export default function Home() {
                 className="aspect-square object-cover w-[300px]"
               />
 
-              <h3 className="font-bold my-3">
-                프로그램 이름이 들어가는 곳입니다..
-              </h3>
+              <h3 className="font-bold my-3">Program Names...</h3>
 
               <h3 className="text-sm">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
               <h3 className="text-sm">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
@@ -74,9 +72,7 @@ export default function Home() {
                 className="aspect-square object-cover w-[300px]"
               />
 
-              <h3 className="font-bold my-3">
-                프로그램 이름이 들어가는 곳입니다..
-              </h3>
+              <h3 className="font-bold my-3">Program Names...</h3>
 
               <h3 className="text-sm">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
               <h3 className="text-sm">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
@@ -86,7 +82,7 @@ export default function Home() {
 
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
-            <p className="text-lg font-semibold">오시는길</p>
+            <p className="text-lg font-semibold">Way to come</p>
 
             <div className="flex items-center space-x-2">
               <Link
@@ -94,7 +90,7 @@ export default function Home() {
                 className="text-md text-gray-500"
                 target="_blank"
               >
-                더보기
+                More
               </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,11 +124,11 @@ export default function Home() {
       <div className="grid grid-cols-2 max-w-7xl m-auto  mt-20 gap-20">
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
-            <p className="text-lg font-semibold">공지사항</p>
+            <p className="text-lg font-semibold">Notice</p>
 
             <div className="flex items-center space-x-2">
               <Link href="#" className="text-md text-gray-500">
-                더보기
+                More
               </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -195,11 +191,11 @@ export default function Home() {
         </div>
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
-            <p className="text-lg font-semibold">언론보도</p>
+            <p className="text-lg font-semibold">News</p>
 
             <div className="flex items-center space-x-2">
               <Link href="#" className="text-md text-gray-500">
-                더보기
+                More
               </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

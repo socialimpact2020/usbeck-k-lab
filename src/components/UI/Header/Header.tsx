@@ -10,46 +10,46 @@ export default function Header() {
       <nav className="space-x-5">
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            센터 소개
+            About Us
           </div>
         </div>
 
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            오시는 길
+            Way to come
           </div>
         </div>
 
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            교육 프로그램
+            Programs
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40"
           >
             <li>
-              <Link href="#">교육 1</Link>
+              <Link href="#">SW Education</Link>
             </li>
             <li>
-              <Link href="#">교육 2</Link>
+              <Link href="#">HW Education</Link>
             </li>
           </ul>
         </div>
 
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            센터 소식
+            Board
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40"
           >
             <li>
-              <Link href="#">공지사항</Link>
+              <Link href="#">Notice</Link>
             </li>
             <li>
-              <Link href="#">언론보도</Link>
+              <Link href="#">News</Link>
             </li>
           </ul>
         </div>
