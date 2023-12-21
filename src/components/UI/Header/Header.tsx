@@ -13,7 +13,7 @@ export default function Header() {
       <nav className="space-x-5">
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            About Us
+            <Link href={urls.aboutus}>About Us</Link>
           </div>
         </div>
 

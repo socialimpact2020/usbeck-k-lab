@@ -1,5 +1,6 @@
 import CurrentDepth from "@/components/UI/CurrentDepth";
 import CurrentSection from "@/components/UI/CurrentSection";
+import SectionWrapper from "@/components/UI/SectionWrapper";
 
 export default function WaytoCome() {
   return (
@@ -8,7 +9,7 @@ export default function WaytoCome() {
 
       <CurrentDepth depth={["Center", "Way to come"]} />
 
-      <section className="max-w-7xl m-auto py-28">
+      <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">
             K_LAB MAKER SPACE GUIDE
@@ -47,7 +48,7 @@ export default function WaytoCome() {
             </span>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
     </div>
   );
 }
