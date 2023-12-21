@@ -2,8 +2,6 @@ import Image from "next/image";
 import logo from "@/images/logo.png";
 import Link from "next/link";
 
-const MENU_LIST = ["센터 소개", "오시는 길", "교육 프로그램", "센터 소식"];
-
 export default function Header() {
   return (
     <header className="flex items-center justify-between mb-5  max-w-7xl m-auto">

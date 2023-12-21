@@ -5,7 +5,7 @@ import dummy2 from "@/images/dummy2.jpg";
 
 export default function Home() {
   return (
-    <div>
+    <div className="mb-10">
       <div className="bg-gray-950 relative">
         <video muted autoPlay loop className="opacity-[0.5] h-[720px] w-full">
           <source src="/background-video.mp4" />
