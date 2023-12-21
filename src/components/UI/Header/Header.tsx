@@ -6,7 +6,7 @@ const MENU_LIST = ["센터 소개", "오시는 길", "교육 프로그램", "센
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex items-center justify-between mb-5  max-w-7xl m-auto">
       <Image src={logo} alt="header logo" className="w-52 object-cover" />
 
       <nav className="space-x-5">
@@ -28,7 +28,7 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32"
           >
             <li>
               <Link href="#">교육 1</Link>
@@ -45,7 +45,7 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32"
           >
             <li>
               <Link href="#">공지사항</Link>

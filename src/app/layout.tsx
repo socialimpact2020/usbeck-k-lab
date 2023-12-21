@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={suitFont.className}>
-        <div className="w-full h-full max-w-7xl m-auto mt-8">
+        <div className="w-full h-full m-auto mt-8">
           <Header />
           <main>{children}</main>
         </div>
