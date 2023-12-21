@@ -21,7 +21,8 @@ body {
   box-sizing: border-box;
 }
 table,
-td {
+td,
+th {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }

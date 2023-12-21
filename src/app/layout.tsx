@@ -5,8 +5,6 @@ import { suitFont } from "@/config/font";
 import Header from "@/components/UI/Header/Header";
 import Footer from "@/components/UI/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Uzbekistan K_LAB MAKER SPACE",
   description: "Uzbekistan K_LAB MAKER SPACE",
