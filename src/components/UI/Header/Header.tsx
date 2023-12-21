@@ -1,11 +1,14 @@
 import Image from "next/image";
 import logo from "@/images/logo.png";
 import Link from "next/link";
+import { urls } from "@/config/site";
 
 export default function Header() {
   return (
     <header className="flex items-center justify-between mb-5  max-w-7xl m-auto">
-      <Image src={logo} alt="header logo" className="w-52 object-cover" />
+      <Link href={urls.home}>
+        <Image src={logo} alt="header logo" className="w-52 object-cover" />
+      </Link>
 
       <nav className="space-x-5">
         <div className="dropdown dropdown-hover">
@@ -16,7 +19,7 @@ export default function Header() {
 
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            Way to come
+            <Link href={urls.waytocome}>Way to come</Link>
           </div>
         </div>
 
