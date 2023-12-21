@@ -49,7 +49,7 @@ export default function Header() {
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40"
           >
             <li>
-              <Link href="#">Notice</Link>
+              <Link href={urls.notice}>Notice</Link>
             </li>
             <li>
               <Link href="#">News</Link>
