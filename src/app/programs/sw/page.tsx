@@ -1,9 +1,10 @@
 import CurrentDepth from "@/components/UI/CurrentDepth";
 import CurrentSection from "@/components/UI/CurrentSection";
 import Tabs from "@/components/UI/Programs/Tabs";
-import SearchInput from "@/components/UI/SearchInput";
+import IconInput from "@/components/UI/IconInput";
 import SectionWrapper from "@/components/UI/SectionWrapper";
 import { useState } from "react";
+import DateSearchForm from "@/components/UI/Forms/DateSearchForm";
 
 export default function SWEducation() {
   return (
@@ -21,9 +22,7 @@ export default function SWEducation() {
 
         <Tabs tabs={["Basic", "Developer", "Expert", "View All"]} />
 
-        <div className="flex justify-center relative max-w-5xl m-auto mb-20">
-          <SearchInput />
-        </div>
+        <DateSearchForm />
       </SectionWrapper>
     </div>
   );

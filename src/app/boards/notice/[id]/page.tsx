@@ -1,7 +1,6 @@
 "use client";
 import CurrentDepth from "@/components/UI/CurrentDepth";
 import CurrentSection from "@/components/UI/CurrentSection";
-import SearchInput from "@/components/UI/SearchInput";
 import SectionWrapper from "@/components/UI/SectionWrapper";
 import { suitFont } from "@/config/font";
 import { useParams } from "next/navigation";
@@ -33,7 +32,6 @@ DEMODAY DAY Ⅱ
   
 감사합니다.`;
 
-
   return (
     <div>
       <CurrentSection text="Notice" />
@@ -60,13 +58,20 @@ DEMODAY DAY Ⅱ
         </div>
 
         <div className="pt-3 pb-3 border-b-gray-300 border-b-2 mb-3">
-          <pre className={suitFont.className + " max-w-5xl whitespace-pre-wrap"}>
+          <pre
+            className={suitFont.className + " max-w-5xl whitespace-pre-wrap"}
+          >
             {messages}
           </pre>
         </div>
 
         <div className="flex justify-end">
-          <button className="bg-black text-white px-4 rounded-md text-sm py-2" onClick={() => router.back()}>Back</button>
+          <button
+            className="bg-black text-white px-4 rounded-md text-sm py-2"
+            onClick={() => router.back()}
+          >
+            Back
+          </button>
         </div>
       </SectionWrapper>
     </div>

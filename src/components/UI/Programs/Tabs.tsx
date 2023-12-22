@@ -13,7 +13,7 @@ export default function Tabs({ tabs }: ITabs) {
     setSelectedTab(tabName);
   };
   return (
-    <div role="tablist" className="tabs tabs-bordered mb-10">
+    <div role="tablist" className="tabs tabs-bordered mb-5">
       {tabs.map((tab) => (
         <a
           role="tab"
