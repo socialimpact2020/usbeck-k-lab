@@ -52,7 +52,7 @@ export default function Header() {
               <Link href={urls.notice}>Notice</Link>
             </li>
             <li>
-              <Link href="#">News</Link>
+              <Link href={urls.news}>News</Link>
             </li>
           </ul>
         </div>

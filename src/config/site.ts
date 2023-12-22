@@ -3,4 +3,5 @@ export const urls = {
   waytocome: "/waytocome",
   aboutus: "/aboutus",
   notice: "/boards/notice",
+  news: "/boards/news",
 };

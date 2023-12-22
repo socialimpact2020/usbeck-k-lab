@@ -11,18 +11,18 @@ import AboutRightImage from "@/images/about_img2.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Notice() {
+export default function News() {
   return (
     <div>
-      <CurrentSection text="Notice" />
-      <CurrentDepth depth={["Boards", "Notice"]} />
+      <CurrentSection text="News" />
+      <CurrentDepth depth={["Boards", "News"]} />
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">
             K_LAB MAKER SPACE GUIDE
           </h4>
-          <h2 className="font-bold text-2xl">Notice</h2>
+          <h2 className="font-bold text-2xl">News</h2>
         </div>
 
         <div className="flex justify-center relative max-w-5xl m-auto mb-20">
@@ -43,14 +43,11 @@ export default function Notice() {
                 <tr key={i}>
                   <td className="text-center">
                     <span className="bg-black px-3 py-1 rounded-full text-white">
-                      Notice
+                      News
                     </span>
                   </td>
-
                   <td className="text-lg font-bold">
-                    <Link href={urls.notice + `/${i + 1}`}>
-                      Lorem Ipsum ~~~~
-                    </Link>
+                    <Link href={urls.news + `/${i + 1}`}>Lorem Ipsum ~~~~</Link>
                   </td>
                   <td className="text-center">2023-12-21</td>
                 </tr>
