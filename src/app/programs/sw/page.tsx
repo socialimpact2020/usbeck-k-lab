@@ -5,6 +5,7 @@ import IconInput from "@/components/UI/IconInput";
 import SectionWrapper from "@/components/UI/SectionWrapper";
 import { useState } from "react";
 import DateSearchForm from "@/components/UI/Forms/DateSearchForm";
+import Card from "@/components/UI/Programs/Card";
 
 export default function SWEducation() {
   return (
@@ -23,6 +24,12 @@ export default function SWEducation() {
         <Tabs tabs={["Basic", "Developer", "Expert", "View All"]} />
 
         <DateSearchForm />
+
+        <div className="grid grid-cols-4 flex-wrap  max-w-7xl m-auto gap-10">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+            <Card key={item} />
+          ))}
+        </div>
       </SectionWrapper>
     </div>
   );

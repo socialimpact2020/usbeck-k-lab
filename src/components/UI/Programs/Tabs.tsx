@@ -13,11 +13,11 @@ export default function Tabs({ tabs }: ITabs) {
     setSelectedTab(tabName);
   };
   return (
-    <div role="tablist" className="tabs tabs-bordered mb-5">
+    <div role="tablist" className="tabs tabs-bordered mb-10">
       {tabs.map((tab) => (
         <a
           role="tab"
-          className={`tab ${selectedTab === tab ? "tab-active" : ""}`}
+          className={`text-lg tab ${selectedTab === tab ? "tab-active" : ""}`}
           onClick={() => onChangeTab(tab)}
           key={tab}
         >

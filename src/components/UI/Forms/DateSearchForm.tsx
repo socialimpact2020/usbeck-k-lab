@@ -29,7 +29,7 @@ export default function DateSearchForm() {
   );
 
   return (
-    <div className="flex items-center space-x-3">
+    <div className="flex items-center space-x-3 mb-14">
       <div className="flex justify-center relative">
         <DatePicker
           selected={startDate}

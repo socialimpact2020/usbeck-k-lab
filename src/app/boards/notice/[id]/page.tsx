@@ -59,7 +59,7 @@ DEMODAY DAY Ⅱ
 
         <div className="pt-3 pb-3 border-b-gray-300 border-b-2 mb-3">
           <pre
-            className={suitFont.className + " max-w-5xl whitespace-pre-wrap"}
+            className={suitFont.className + " max-w-7xl whitespace-pre-wrap"}
           >
             {messages}
           </pre>

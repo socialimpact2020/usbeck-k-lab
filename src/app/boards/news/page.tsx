@@ -25,7 +25,7 @@ export default function News() {
           <h2 className="font-bold text-2xl">News</h2>
         </div>
 
-        <div className="flex justify-center relative max-w-5xl m-auto mb-20">
+        <div className="flex justify-center relative max-w-7xl m-auto mb-20">
           <IconInput text="Please enter your search term">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -5,7 +5,7 @@ interface ICurrentDepth {
 export default function CurrentDepth({ depth }: ICurrentDepth) {
   return (
     <>
-      <div className="max-w-5xl m-auto py-5">
+      <div className="max-w-7xl m-auto py-5">
         <div className="flex items-center space-x-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"

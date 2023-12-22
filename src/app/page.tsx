@@ -26,7 +26,7 @@ export default function Home() {
       </div>
 
       {/* 프로그램 / 오시는길 */}
-      <div className="grid grid-cols-2 max-w-5xl m-auto  mt-10 gap-20">
+      <div className="grid grid-cols-2 max-w-7xl m-auto  mt-10 gap-20">
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
             <p className="text-lg font-semibold">Programs</p>
@@ -122,7 +122,7 @@ export default function Home() {
       </div>
 
       {/* 공지사항 / 언론보도 */}
-      <div className="grid grid-cols-2 max-w-5xl m-auto  mt-20 gap-20">
+      <div className="grid grid-cols-2 max-w-7xl m-auto  mt-20 gap-20">
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
             <p className="text-lg font-semibold">Notice</p>

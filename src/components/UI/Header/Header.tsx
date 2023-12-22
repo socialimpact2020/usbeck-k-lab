@@ -5,7 +5,7 @@ import { urls } from "@/config/site";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between mb-5  max-w-5xl m-auto">
+    <header className="flex items-center mb-5  max-w-7xl justify-between m-auto">
       <Link href={urls.home}>
         <Image src={logo} alt="header logo" className="w-52 object-cover" />
       </Link>
@@ -29,7 +29,7 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36"
           >
             <li>
               <Link href={urls.sw}>SW Education</Link>
@@ -46,7 +46,7 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-28 left-16"
           >
             <li>
               <Link href={urls.notice}>Notice</Link>

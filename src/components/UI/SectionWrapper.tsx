@@ -4,6 +4,6 @@ export default function SectionWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <section className="max-w-5xl m-auto py-28 relative">{children}</section>
+    <section className="max-w-7xl m-auto py-28 relative">{children}</section>
   );
 }
