@@ -46,7 +46,7 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-28 left-16"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-28 -left-16"
           >
             <li>
               <Link href={urls.notice}>Notice</Link>

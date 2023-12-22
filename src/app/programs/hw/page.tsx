@@ -7,21 +7,21 @@ import { useState } from "react";
 import DateSearchForm from "@/components/UI/Forms/DateSearchForm";
 import Card from "@/components/UI/Programs/Card";
 
-export default function SWEducation() {
+export default function HWEducation() {
   return (
     <div>
-      <CurrentSection text="SW Education" />
-      <CurrentDepth depth={["Programs", "SW Education"]} />
+      <CurrentSection text="HW Education" />
+      <CurrentDepth depth={["Programs", "HW Education"]} />
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">
             K_LAB MAKER SPACE GUIDE
           </h4>
-          <h2 className="font-bold text-2xl">Programs - SW Education</h2>
+          <h2 className="font-bold text-2xl">Programs - HW Education</h2>
         </div>
 
-        <Tabs tabs={["View All", "Basic", "Developer", "Expert"]} />
+        <Tabs tabs={["View All", "Open Up", "Special Course"]} />
 
         <DateSearchForm />
 

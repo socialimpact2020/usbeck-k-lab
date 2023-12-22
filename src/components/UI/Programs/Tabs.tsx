@@ -7,7 +7,7 @@ interface ITabs {
 }
 
 export default function Tabs({ tabs }: ITabs) {
-  const [selectedTab, setSelectedTab] = useState("Basic");
+  const [selectedTab, setSelectedTab] = useState("View All");
 
   const onChangeTab = (tabName: string) => {
     setSelectedTab(tabName);
