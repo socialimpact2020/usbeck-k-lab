@@ -25,7 +25,7 @@ export default function Home() {
       </div>
 
       {/* 프로그램 / 오시는길 */}
-      <div className="grid grid-cols-2 max-w-7xl m-auto  mt-10 gap-20">
+      <div className="grid grid-cols-2 max-w-5xl m-auto  mt-10 gap-20">
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
             <p className="text-lg font-semibold">Programs</p>
@@ -61,8 +61,8 @@ export default function Home() {
 
               <h3 className="font-bold my-3">Program Names...</h3>
 
-              <h3 className="text-sm">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
-              <h3 className="text-sm">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
+              <h3 className="text-xs">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
+              <h3 className="text-xs">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
             </div>
 
             <div>
@@ -74,8 +74,8 @@ export default function Home() {
 
               <h3 className="font-bold my-3">Program Names...</h3>
 
-              <h3 className="text-sm">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
-              <h3 className="text-sm">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
+              <h3 className="text-xs">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
+              <h3 className="text-xs">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="mt-5 bg-black w-full h-[378px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.1518968960327!2d69.27849151203073!3d41.30555907119057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ad671d84dcb%3A0x3175fb9f24cd3354!2zMjUgU2hha2hyaXNhYnogU3RyZWV0LCBUYXNoa2VudCwg7Jqw7KaI67Kg7YKk7Iqk7YOE!5e0!3m2!1sko!2skr!4v1703168927173!5m2!1sko!2skr"
-              width="600"
+              width="100%"
               height="378"
               loading="lazy"
             ></iframe>
@@ -121,7 +121,7 @@ export default function Home() {
       </div>
 
       {/* 공지사항 / 언론보도 */}
-      <div className="grid grid-cols-2 max-w-7xl m-auto  mt-20 gap-20">
+      <div className="grid grid-cols-2 max-w-5xl m-auto  mt-20 gap-20">
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
             <p className="text-lg font-semibold">Notice</p>

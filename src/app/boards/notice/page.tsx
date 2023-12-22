@@ -33,15 +33,15 @@ export default function Notice() {
           <table className="table">
             <thead>
               <tr className="text-black">
-                <th className="text-center">TYPE</th>
-                <th>TITLE</th>
-                <th className="text-center">CREATED</th>
+                <th className="text-center w-1/12">TYPE</th>
+                <th className="w-1/2">TITLE</th>
+                <th className="text-center w-1/12">CREATED</th>
               </tr>
             </thead>
             <tbody>
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => (
                 <tr key={i}>
-                  <td className="text-center">
+                  <td className="text-center w-1/12">
                     <span className="bg-black px-3 py-1 rounded-full text-white">
                       Notice
                     </span>

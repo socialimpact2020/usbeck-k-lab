@@ -5,7 +5,7 @@ import { urls } from "@/config/site";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between mb-5  max-w-7xl m-auto">
+    <header className="flex items-center justify-between mb-5  max-w-5xl m-auto">
       <Link href={urls.home}>
         <Image src={logo} alt="header logo" className="w-52 object-cover" />
       </Link>

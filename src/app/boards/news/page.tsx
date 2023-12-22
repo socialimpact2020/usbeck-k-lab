@@ -33,21 +33,24 @@ export default function News() {
           <table className="table">
             <thead>
               <tr className="text-black">
-                <th className="text-center">TYPE</th>
-                <th>TITLE</th>
-                <th className="text-center">CREATED</th>
+                <th className="text-center w-1/12">TYPE</th>
+                <th className="w-1/2">TITLE</th>
+                <th className="text-center w-1/12">CREATED</th>
               </tr>
             </thead>
             <tbody>
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, i) => (
                 <tr key={i}>
-                  <td className="text-center">
+                  <td className="text-center w-1/12">
                     <span className="bg-black px-3 py-1 rounded-full text-white">
-                      News
+                      Notice
                     </span>
                   </td>
+
                   <td className="text-lg font-bold">
-                    <Link href={urls.news + `/${i + 1}`}>Lorem Ipsum ~~~~</Link>
+                    <Link href={urls.notice + `/${i + 1}`}>
+                      Lorem Ipsum ~~~~
+                    </Link>
                   </td>
                   <td className="text-center">2023-12-21</td>
                 </tr>
