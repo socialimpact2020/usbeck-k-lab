@@ -32,7 +32,7 @@ export default function Home() {
             <p className="text-lg font-semibold">Programs</p>
 
             <div className="flex items-center space-x-2">
-              <Link href="#" className="text-md text-gray-500">
+              <Link href={urls.sw} className="text-md text-gray-500">
                 More
               </Link>
               <svg
@@ -128,7 +128,7 @@ export default function Home() {
             <p className="text-lg font-semibold">Notice</p>
 
             <div className="flex items-center space-x-2">
-              <Link href="#" className="text-md text-gray-500">
+              <Link href={urls.notice} className="text-md text-gray-500">
                 More
               </Link>
               <svg
@@ -153,35 +153,45 @@ export default function Home() {
               <tbody>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB Notice 1</Link>
+                    <Link href={urls.notice + "/1"}>
+                      Uzbeckistan K_LAB Notice 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB Notice 1</Link>
+                    <Link href={urls.notice + "/1"}>
+                      Uzbeckistan K_LAB Notice 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB Notice 1</Link>
+                    <Link href={urls.notice + "/1"}>
+                      Uzbeckistan K_LAB Notice 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB Notice 1</Link>
+                    <Link href={urls.notice + "/1"}>
+                      Uzbeckistan K_LAB Notice 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB Notice 1</Link>
+                    <Link href={urls.notice + "/1"}>
+                      Uzbeckistan K_LAB Notice 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
@@ -195,7 +205,7 @@ export default function Home() {
             <p className="text-lg font-semibold">News</p>
 
             <div className="flex items-center space-x-2">
-              <Link href="#" className="text-md text-gray-500">
+              <Link href={urls.news} className="text-md text-gray-500">
                 More
               </Link>
               <svg
@@ -220,35 +230,45 @@ export default function Home() {
               <tbody>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB News 1</Link>
+                    <Link href="https://google.com">
+                      Uzbeckistan K_LAB News 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB News 1</Link>
+                    <Link href="https://google.com">
+                      Uzbeckistan K_LAB News 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB News 1</Link>
+                    <Link href="https://google.com">
+                      Uzbeckistan K_LAB News 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB News 1</Link>
+                    <Link href="https://google.com">
+                      Uzbeckistan K_LAB News 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
                 </tr>
                 <tr>
                   <td className="font-bold">
-                    <Link href="#">Uzbeckistan K_LAB News 1</Link>
+                    <Link href="https://google.com">
+                      Uzbeckistan K_LAB News 1
+                    </Link>
                   </td>
 
                   <td className="text-right text-gray-500">2023-12-21</td>
