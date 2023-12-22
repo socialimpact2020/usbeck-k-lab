@@ -59,7 +59,7 @@ export default function CurrentDepth({ depth }: ICurrentDepth) {
           ))}
         </div>
       </div>
-      <div className=" mb-2 border-b-[1px] border-b-gray-300"></div>
+      <div className="border-b-[1px] border-b-gray-300"></div>
     </>
   );
 }
