@@ -1,8 +1,11 @@
+"use client";
 import CurrentDepth from "@/components/UI/CurrentDepth";
 import CurrentSection from "@/components/UI/CurrentSection";
 import SectionWrapper from "@/components/UI/SectionWrapper";
+import useInfo from "@/hooks/useInfo";
 
 export default function WaytoCome() {
+  const { info } = useInfo();
   return (
     <div>
       <CurrentSection text="Way to come" />
@@ -34,18 +37,15 @@ export default function WaytoCome() {
 
           <div className="space-x-8">
             <span className="font-bold text-lg">Customer Service Center</span>
-            <span className="">+998 95 001 00 53</span>
+            <span className="">{info?.tel}</span>
           </div>
           <div className="space-x-8">
             <span className="font-bold text-lg">E-mail</span>
-            <span className="">opk.startup@gmail.com</span>
+            <span className="">{info?.email}</span>
           </div>
           <div className="space-x-8">
             <span className="font-bold text-lg">Address</span>
-            <span className="">
-              Sharkhrisabz Street, 25, Mirabod district, Tashkent city,
-              Uzbekistan (basement)
-            </span>
+            <span className="">{info?.address}</span>
           </div>
         </div>
       </SectionWrapper>

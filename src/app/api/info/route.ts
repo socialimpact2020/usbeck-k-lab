@@ -6,5 +6,5 @@ const client = new PrismaClient();
 export async function GET() {
   const info = await client.info.findFirst();
 
-  return NextResponse.json({ info });
+  return NextResponse.json({ ok: true, info });
 }
