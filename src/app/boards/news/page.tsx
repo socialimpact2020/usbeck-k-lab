@@ -48,7 +48,7 @@ export default function News() {
                   </td>
 
                   <td className="text-lg font-bold">
-                    <Link href={urls.notice + `/${i + 1}`}>
+                    <Link href="https://www.naver.com" target="_blank">
                       Lorem Ipsum ~~~~
                     </Link>
                   </td>

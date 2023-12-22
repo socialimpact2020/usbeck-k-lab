@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dummy1 from "@/images/dummy1.jpg";
 import dummy2 from "@/images/dummy2.jpg";
+import { urls } from "@/config/site";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
             K_LAB MAKER SPACE
           </h2>
           <button className="text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-5 rounded-md shadow-lg">
-            <Link href="#">Enter MarketSpace</Link>
+            <Link href={urls.aboutus}>Enter MarketSpace</Link>
           </button>
         </div>
       </div>

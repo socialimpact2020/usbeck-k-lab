@@ -32,10 +32,10 @@ export default function Header() {
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-40"
           >
             <li>
-              <Link href="#">SW Education</Link>
+              <Link href={urls.sw}>SW Education</Link>
             </li>
             <li>
-              <Link href="#">HW Education</Link>
+              <Link href={urls.hw}>HW Education</Link>
             </li>
           </ul>
         </div>

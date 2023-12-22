@@ -4,4 +4,6 @@ export const urls = {
   aboutus: "/aboutus",
   notice: "/boards/notice",
   news: "/boards/news",
+  sw: "/programs/sw",
+  hw: "/programs/hw"
 };
