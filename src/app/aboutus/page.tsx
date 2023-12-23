@@ -36,7 +36,11 @@ export default function AboutUs() {
         </div>
       </SectionWrapper>
       <SectionWrapper>
-        <div className="bg-[url('/about_img3.png')] h-[250px] flex flex-col items-end justify-center bg-cover pr-10">
+        <div
+          className={
+            "bg-[url('/about_img3.png')] h-[250px] flex flex-col items-end justify-center bg-cover pr-10"
+          }
+        >
           <p className="font-bold text-2xl text-white">
             Creating an ecosystem for manufacturing prototypes
           </p>
