@@ -7,7 +7,7 @@ interface IResponseInfo {
 }
 
 export default function useInfo() {
-  const { data } = useSWR<IResponseInfo>("/api/info");
+  const { data, isLoading } = useSWR<IResponseInfo>("/api/info");
 
-  return { info: data?.info };
+  return { info: data?.info, isLoading };
 }
