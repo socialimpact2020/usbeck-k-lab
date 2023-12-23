@@ -1,57 +1,58 @@
 import Image from "next/image";
 import logo from "@/images/logo.png";
 import Link from "next/link";
-
-const MENU_LIST = ["센터 소개", "오시는 길", "교육 프로그램", "센터 소식"];
+import { urls } from "@/config/site";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between">
-      <Image src={logo} alt="header logo" className="w-52 object-cover" />
+    <header className="flex items-center mb-5  max-w-7xl justify-between m-auto">
+      <Link href={urls.home}>
+        <Image src={logo} alt="header logo" className="w-52 object-cover" />
+      </Link>
 
       <nav className="space-x-5">
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            센터 소개
+            <Link href={urls.aboutus}>About Us</Link>
           </div>
         </div>
 
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            오시는 길
+            <Link href={urls.waytocome}>Way to come</Link>
           </div>
         </div>
 
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            교육 프로그램
+            Programs
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36"
           >
             <li>
-              <Link href="#">교육 1</Link>
+              <Link href={urls.sw}>SW Education</Link>
             </li>
             <li>
-              <Link href="#">교육 2</Link>
+              <Link href={urls.hw}>HW Education</Link>
             </li>
           </ul>
         </div>
 
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="m-1">
-            센터 소식
+            Board
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-28 -left-16"
           >
             <li>
-              <Link href="#">공지사항</Link>
+              <Link href={urls.notice}>Notice</Link>
             </li>
             <li>
-              <Link href="#">언론보도</Link>
+              <Link href={urls.news}>News</Link>
             </li>
           </ul>
         </div>

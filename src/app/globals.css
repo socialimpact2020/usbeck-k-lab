@@ -15,3 +15,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+html,
+body {
+  box-sizing: border-box;
+}
+table,
+td,
+th {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
