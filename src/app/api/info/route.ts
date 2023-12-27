@@ -1,8 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import client from "@/libs/server/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse, NextRequest } from "next/server";
-
-const client = new PrismaClient();
 
 export async function GET() {
   const info = await client.info.findFirst();

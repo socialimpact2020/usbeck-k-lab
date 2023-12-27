@@ -64,7 +64,7 @@ export default function News() {
 
                   <td className="text-lg font-bold">
                     <Link href="https://www.naver.com" target="_blank">
-                      Lorem Ipsum ~~~~
+                      Coming soon..
                     </Link>
                   </td>
                   <td className="text-center">2023-12-21</td>

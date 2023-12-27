@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dummy1 from "@/images/dummy1.jpg";
 import dummy2 from "@/images/dummy2.jpg";
+import dummyImg from "@/images/img_loading.jpg";
 import { urls } from "@/config/site";
 import Header from "@/components/UI/Header/Header";
 import Footer from "@/components/UI/Footer/Footer";
@@ -57,31 +58,42 @@ export default function Home() {
             </div>
 
             <div className="mt-5 grid grid-cols-2 mb-5 gap-5">
-              <div>
-                <Image
-                  src={dummy1}
-                  alt="dummy1"
-                  className="aspect-square object-cover w-[300px]"
-                />
+              <Link href="/programs/sw/0">
+                <div>
+                  <Image
+                    src={dummyImg}
+                    alt="dummy1"
+                    className="aspect-square object-cover w-[300px]"
+                  />
 
-                <h3 className="font-bold my-3">Program Names...</h3>
+                  <h3 className="font-bold my-3">Coming soon..</h3>
 
-                <h3 className="text-xs">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
-                <h3 className="text-xs">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
-              </div>
+                  <h3 className="text-xs">
+                    모집 기간 | 2023-12-09 ~ 2023-12-20
+                  </h3>
+                  <h3 className="text-xs">
+                    진행 기간 | 2023-12-21 ~ 2023-12-22
+                  </h3>
+                </div>
+              </Link>
+              <Link href="/programs/sw/0">
+                <div>
+                  <Image
+                    src={dummyImg}
+                    alt="dummy2"
+                    className="aspect-square object-cover w-[300px]"
+                  />
 
-              <div>
-                <Image
-                  src={dummy2}
-                  alt="dummy2"
-                  className="aspect-square object-cover w-[300px]"
-                />
+                  <h3 className="font-bold my-3">Coming soon..</h3>
 
-                <h3 className="font-bold my-3">Program Names...</h3>
-
-                <h3 className="text-xs">모집 기간 | 2023-12-09 ~ 2023-12-20</h3>
-                <h3 className="text-xs">진행 기간 | 2023-12-21 ~ 2023-12-22</h3>
-              </div>
+                  <h3 className="text-xs">
+                    모집 기간 | 2023-12-09 ~ 2023-12-20
+                  </h3>
+                  <h3 className="text-xs">
+                    진행 기간 | 2023-12-21 ~ 2023-12-22
+                  </h3>
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -157,45 +169,35 @@ export default function Home() {
                 <tbody>
                   <tr>
                     <td className="font-bold">
-                      <Link href={urls.notice + "/1"}>
-                        Uzbeckistan K_LAB Notice 1
-                      </Link>
+                      <Link href={urls.notice + "/1"}>Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href={urls.notice + "/1"}>
-                        Uzbeckistan K_LAB Notice 1
-                      </Link>
+                      <Link href={urls.notice + "/1"}>Coming soon.. </Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href={urls.notice + "/1"}>
-                        Uzbeckistan K_LAB Notice 1
-                      </Link>
+                      <Link href={urls.notice + "/1"}>Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href={urls.notice + "/1"}>
-                        Uzbeckistan K_LAB Notice 1
-                      </Link>
+                      <Link href={urls.notice + "/1"}>Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href={urls.notice + "/1"}>
-                        Uzbeckistan K_LAB Notice 1
-                      </Link>
+                      <Link href={urls.notice + "/1"}>Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
@@ -234,45 +236,35 @@ export default function Home() {
                 <tbody>
                   <tr>
                     <td className="font-bold">
-                      <Link href="https://google.com">
-                        Uzbeckistan K_LAB News 1
-                      </Link>
+                      <Link href="https://google.com">Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href="https://google.com">
-                        Uzbeckistan K_LAB News 1
-                      </Link>
+                      <Link href="https://google.com">Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href="https://google.com">
-                        Uzbeckistan K_LAB News 1
-                      </Link>
+                      <Link href="https://google.com">Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href="https://google.com">
-                        Uzbeckistan K_LAB News 1
-                      </Link>
+                      <Link href="https://google.com">Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
                   </tr>
                   <tr>
                     <td className="font-bold">
-                      <Link href="https://google.com">
-                        Uzbeckistan K_LAB News 1
-                      </Link>
+                      <Link href="https://google.com">Coming soon..</Link>
                     </td>
 
                     <td className="text-right text-gray-500">2023-12-21</td>
