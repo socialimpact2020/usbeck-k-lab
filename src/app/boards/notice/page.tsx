@@ -63,9 +63,7 @@ export default function Notice() {
                   </td>
 
                   <td className="text-lg font-bold">
-                    <Link href={urls.notice + `/${i + 1}`}>
-                      Lorem Ipsum ~~~~
-                    </Link>
+                    <Link href={urls.notice + `/${i + 1}`}>Coming soon..</Link>
                   </td>
                   <td className="text-center">2023-12-21</td>
                 </tr>

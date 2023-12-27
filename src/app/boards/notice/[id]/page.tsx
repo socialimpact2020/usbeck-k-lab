@@ -47,9 +47,7 @@ DEMODAY DAY Ⅱ
 
         <div className="mt-10 pt-10  border-t-gray-300 ">
           <div className="flex items-end justify-between border-b-2 border-b-gray-300 pb-5">
-            <h1 className="text-3xl font-bold">
-              It is a long established fact that a reader will be distracted
-            </h1>
+            <h1 className="text-3xl font-bold">Coming soon..</h1>
             <div className="min-w-[150px]">
               <p className="text-gray-500 text-right">Views 0</p>
               <p className="text-gray-500">Created 2023-12-21</p>
