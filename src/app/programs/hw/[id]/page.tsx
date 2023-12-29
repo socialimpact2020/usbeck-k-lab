@@ -25,9 +25,7 @@ export default function ProgramDetail() {
             <div className="relative">
               <div className="mb-12">
                 <span className="text-sm text-gray-500 font-bold">ACTIVE</span>
-                <p className="text-2xl font-bold">
-                  Contrary to popular belief, Lorem Ipsum
-                </p>
+                <p className="text-2xl font-bold">Coming soon..</p>
               </div>
 
               <div>
