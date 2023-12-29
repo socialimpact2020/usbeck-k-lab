@@ -13,7 +13,7 @@ export default function Card() {
         </div>
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Contrary to popular belief</h2>
+        <h2 className="card-title">Coming soon..</h2>
 
         <p className="text-end text-gray-500">~2023-12-28</p>
       </div>
