@@ -18,12 +18,10 @@ export default function Home() {
           </video>
 
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-            <h2 className="text-6xl text-white font-bold shadow-sm">
-              Uzbekistan
+            <h2 className="text-6xl text-white font-bold shadow-sm mb-10">
+              Uzbekistan K_LAB
             </h2>
-            <h2 className="text-6xl text-white font-bold shadow-sm mt-5 mb-10">
-              K_LAB MAKER SPACE
-            </h2>
+
             <button className="text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-5 rounded-md shadow-lg">
               <Link href={urls.aboutus}>Enter MarketSpace</Link>
             </button>

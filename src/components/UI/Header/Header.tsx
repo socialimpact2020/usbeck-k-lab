@@ -5,9 +5,9 @@ import { urls } from "@/config/site";
 
 export default function Header() {
   return (
-    <header className="flex items-center mb-5  max-w-7xl justify-between m-auto">
+    <header className="flex items-center max-w-7xl justify-between m-auto">
       <Link href={urls.home}>
-        <Image src={logo} alt="header logo" className="w-52 object-cover" />
+        <Image src={logo} alt="header logo" className="w-48 object-cover" />
       </Link>
 
       <nav className="space-x-5">
