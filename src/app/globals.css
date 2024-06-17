@@ -26,3 +26,15 @@ th {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+.ql-container {
+  font-family: unset !important;
+}
+
+.sanitized-parent img {
+  max-width: 40dvw;
+}
+
+.quill .ql-snow .ql-editor img {
+  max-width: 40dvw;
+}

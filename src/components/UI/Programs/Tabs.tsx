@@ -2,13 +2,17 @@
 
 import { useState } from "react";
 
+interface ITab {
+  tabLabel: string;
+  tabValue: string;
+}
 interface ITabs {
-  tabs: string[];
+  tabs: ITab[];
+  selectedTab: string;
+  setSelectedTab: (tabValue: string) => void;
 }
 
-export default function Tabs({ tabs }: ITabs) {
-  const [selectedTab, setSelectedTab] = useState("View All");
-
+export default function Tabs({ tabs, selectedTab, setSelectedTab }: ITabs) {
   const onChangeTab = (tabName: string) => {
     setSelectedTab(tabName);
   };
@@ -17,11 +21,13 @@ export default function Tabs({ tabs }: ITabs) {
       {tabs.map((tab) => (
         <a
           role="tab"
-          className={`text-lg tab ${selectedTab === tab ? "tab-active" : ""}`}
-          onClick={() => onChangeTab(tab)}
-          key={tab}
+          className={`text-lg tab ${
+            selectedTab === tab.tabValue ? "tab-active" : ""
+          }`}
+          onClick={() => onChangeTab(tab.tabValue)}
+          key={tab.tabValue}
         >
-          {tab}
+          {tab.tabLabel}
         </a>
       ))}
     </div>

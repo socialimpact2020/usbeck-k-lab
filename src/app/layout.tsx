@@ -4,8 +4,11 @@ import "./globals.css";
 import { suitFont } from "@/config/font";
 
 import { SWRProvider } from "./swr-provider";
+import { SessionProvider } from "next-auth/react";
+import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.nipak-labuzb.co.kr"),
   title: "Uzbekistan K_LAB MAKER SPACE",
   description: "Uzbekistan K_LAB MAKER SPACE",
 };
@@ -16,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <SWRProvider>
+    <Providers>
       <html lang="en" className="scroll-smooth">
         <body className={suitFont.className}>
           <div className="w-full h-full m-auto">
@@ -24,6 +27,6 @@ export default function RootLayout({
           </div>
         </body>
       </html>
-    </SWRProvider>
+    </Providers>
   );
 }

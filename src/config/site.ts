@@ -5,5 +5,13 @@ export const urls = {
   notice: "/boards/notice",
   news: "/boards/news",
   sw: "/programs/sw",
-  hw: "/programs/hw"
+  hw: "/programs/hw",
+  dashboard: "/dashboard",
+  dashboardFooter: "/dashboard/footer",
+  dashboardBoards: "/dashboard/boards",
+  dashboardPost: "/dashboard/post",
+  dashboardNews: "/dashboard/news",
+  dashboardSW: "/dashboard/sw",
+  dashboardHW: "/dashboard/hw",
+  dashboardEducationNew: "/dashboard/edu/new",
 };

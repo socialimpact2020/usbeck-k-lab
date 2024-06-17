@@ -1,9 +1,14 @@
+"use client";
 import Image from "next/image";
 import logo from "@/images/logo.png";
 import Link from "next/link";
 import { urls } from "@/config/site";
 
+import { signOut, useSession } from "next-auth/react";
+
 export default function Header() {
+  const { data: session } = useSession();
+
   return (
     <header className="flex items-center max-w-7xl justify-between m-auto">
       <Link href={urls.home}>
@@ -56,6 +61,21 @@ export default function Header() {
             </li>
           </ul>
         </div>
+
+        {session && (
+          <div className="dropdown dropdown-hover">
+            <div tabIndex={0} role="button" className="m-1">
+              <Link href={urls.dashboard}>Dashboard</Link>
+            </div>
+          </div>
+        )}
+        {session && (
+          <div className="dropdown dropdown-hover">
+            <div tabIndex={0} role="button" className="m-1">
+              <span onClick={() => signOut()}>Sign out</span>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

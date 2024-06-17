@@ -1,19 +1,80 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
-
 model Info {
-  id Int @id @default(autoincrement())
+  id      Int    @id @default(autoincrement())
   address String
-  tel String
-  email String
+  tel     String
+  email   String
+}
+
+model Admin {
+  id            String @id @unique
+  password      String
+  access_token  String
+  refresh_token String
+}
+
+model Post {
+  id        Int      @id @default(autoincrement())
+  type      String
+  title     String
+  content   String   @db.LongText
+  views     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RecruitmentPeriod {
+  id        Int      @id @default(autoincrement())
+  startDate DateTime
+  endDate   DateTime
+  course    Course[]
+}
+
+model ProgressPeriod {
+  id        Int      @id @default(autoincrement())
+  startDate DateTime
+  endDate   DateTime
+  course    Course[]
+}
+
+model Course {
+  id                  Int               @id @default(autoincrement())
+  category            Category
+  subcategory         Subcategory
+  thumbnailURL        String
+  title               String
+  linkURL             String
+  content             String            @db.LongText
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+  recruitmentPeriodId Int
+  progressPeriodId    Int
+  recruitmentPeriod   RecruitmentPeriod @relation(fields: [recruitmentPeriodId], references: [id])
+  progressPeriod      ProgressPeriod    @relation(fields: [progressPeriodId], references: [id])
+
+  @@index([id])
+  @@index([recruitmentPeriodId], map: "recruitmentPeriodId_index")
+  @@index([progressPeriodId], map: "progressPeriodId_index")
+}
+
+enum Category {
+  SW
+  HW
+}
+
+enum Subcategory {
+  Basic
+  Developer
+  Expert
+  OpenUp
+  SpecialCourse
 }

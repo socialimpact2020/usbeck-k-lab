@@ -1,0 +1,25 @@
+# POST http://localhost:3000/api/auth/login
+# Content-Type: application/json
+
+# {
+#     "id": "uzklab",
+#     "password": "uzklab2024!@#"
+# }
+
+
+
+# POST http://localhost:3000/api/info
+# Content-Type: application/json
+
+# {
+#     "address": "123",
+#     "tel": "123",
+#     "email": "123"
+# }
+
+POST http://localhost:3000/api/edu
+Content-Type: application/json
+
+{
+    
+}
