@@ -47,7 +47,7 @@ type IPresignedResponse = {
 };
 
 export default function EditEducation({ params }: { params: { id: string } }) {
-  const { register, handleSubmit, setValue } = useForm<Inputs>();
+  const { register, handleSubmit, setValue, watch } = useForm<Inputs>();
   const [category, setCategory] = useState(params.id);
   const [recruitmentPeriodStartDate, recruitmentPeriodSetStartDate] =
     useState<Date>();
@@ -244,7 +244,7 @@ export default function EditEducation({ params }: { params: { id: string } }) {
         <select
           className="select select-bordered w-full max-w-xs"
           {...register("subcategory", { required: true })}
-          defaultValue={data?.subcategory}
+          value={watch("subcategory")}
         >
           <option value="" disabled>
             Select SubCategory
