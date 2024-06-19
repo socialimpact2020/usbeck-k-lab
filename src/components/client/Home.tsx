@@ -17,7 +17,7 @@ export default function Home() {
   console.log(data);
   return (
     <>
-      <div className="grid grid-cols-2 max-w-7xl m-auto  mt-10 gap-20">
+      <div className="grid grid-cols-1 max-w-7xl m-auto  mt-10 gap-20">
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
             <p className="text-lg font-semibold">Programs</p>
@@ -43,7 +43,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-5 grid grid-cols-2 mb-5 gap-5">
+          <div className="mt-5 flex mb-5 justify-start gap-8">
             {data &&
               data.courses?.map((course, _) => (
                 <Link
@@ -90,7 +90,7 @@ export default function Home() {
               ))}
           </div>
         </div>
-
+        {/* 
         <div>
           <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
             <p className="text-lg font-semibold">Way to come</p>
@@ -128,7 +128,7 @@ export default function Home() {
               loading="lazy"
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-2 max-w-7xl m-auto  mt-20 gap-20">
@@ -203,7 +203,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto mb-16">
             <table className="table">
               <tbody>
                 {data &&

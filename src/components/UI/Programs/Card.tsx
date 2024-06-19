@@ -40,7 +40,7 @@ export default function Card(course: ICardProps) {
 
         {new Date(course.recruitmentPeriod.startDate) <= new Date() &&
         new Date() <= new Date(course.recruitmentPeriod.endDate) ? (
-          <div className="absolute top-3 left-3 bg-violet-600 text-white rounded-full px-2 py-2 text-xs">
+          <div className="absolute top-3 left-3 bg-cyan-700 text-white rounded-full px-2 py-2 text-xs">
             ACTIVE
           </div>
         ) : (

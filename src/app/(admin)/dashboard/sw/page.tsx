@@ -22,7 +22,7 @@ export default function EducationList() {
           alt="header logo"
           className="w-36 object-cover mb-5"
         />
-        <h1 className="text-3xl text-zinc-600 font-bold mb-10">SW Education</h1>
+        <h1 className="text-3xl text-zinc-600 font-bold mb-10">IT ACADEMY</h1>
       </div>
       <DashboardEducationList category="sw" />
     </div>

@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const courses = await client.course.findMany({
       orderBy: { createdAt: "desc" },
-      take: 2,
+      take: 4,
       include: { progressPeriod: true, recruitmentPeriod: true },
     });
     const notices = await client.post.findMany({

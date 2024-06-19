@@ -237,8 +237,8 @@ export default function EditEducation({ params }: { params: { id: string } }) {
           <option value="" disabled>
             Select Category
           </option>
-          <option value="SW">SW</option>
-          <option value="HW">HW</option>
+          <option value="SW">IT ACADEMY</option>
+          <option value="HW">Digital Manufacturing Education</option>
         </select>
 
         <select

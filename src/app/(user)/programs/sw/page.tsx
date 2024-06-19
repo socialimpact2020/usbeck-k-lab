@@ -126,15 +126,15 @@ export default function SWEducation() {
   console.log(data);
   return (
     <div>
-      <CurrentSection text="SW Education" />
-      <CurrentDepth depth={["Programs", "SW Education"]} />
+      <CurrentSection text="IT ACADEMY" />
+      <CurrentDepth depth={["Programs", "IT ACADEMY"]} />
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">
-            K_LAB MAKER SPACE GUIDE
+            K_LAB PROGRAMS GUIDE
           </h4>
-          <h2 className="font-bold text-2xl">Programs - SW Education</h2>
+          <h2 className="font-bold text-2xl">Programs - IT ACADEMY</h2>
         </div>
 
         <Tabs

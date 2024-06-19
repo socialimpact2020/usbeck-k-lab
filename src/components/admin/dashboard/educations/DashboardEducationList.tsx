@@ -163,7 +163,7 @@ export default function DashboardEducationList({
           <thead className="bg-slate-300">
             <tr>
               <th>ID</th>
-              <th>CATEGORY</th>
+
               <th>SUB-CATEGORY</th>
               <th>TITLE</th>
               <th>CREATEDAT</th>
@@ -174,11 +174,11 @@ export default function DashboardEducationList({
             {data?.courses.map((course, index) => (
               <tr key={index}>
                 <th>{course.id}</th>
-                <td>
+                {/* <td>
                   <span className="bg-black text-white px-2 py-1 rounded-full">
                     {course.category}
                   </span>
-                </td>
+                </td> */}
                 <td>
                   <span className="bg-black text-white px-2 py-1 rounded-full">
                     {course.subcategory}

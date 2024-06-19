@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "@/images/logo.png";
+import logo from "@/images/logo.jpg";
 import Link from "next/link";
 import { urls } from "@/config/site";
 
@@ -10,7 +10,7 @@ export default function Header() {
   const { data: session } = useSession();
 
   return (
-    <header className="flex items-center max-w-7xl justify-between m-auto">
+    <header className="flex items-center max-w-7xl justify-between m-auto py-8">
       <Link href={urls.home}>
         <Image src={logo} alt="header logo" className="w-48 object-cover" />
       </Link>
@@ -34,13 +34,13 @@ export default function Header() {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36"
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[220px]"
           >
             <li>
-              <Link href={urls.sw}>SW Education</Link>
+              <Link href={urls.sw}>IT ACADEMY</Link>
             </li>
             <li>
-              <Link href={urls.hw}>HW Education</Link>
+              <Link href={urls.hw}>Digital Manufacturing Education</Link>
             </li>
           </ul>
         </div>

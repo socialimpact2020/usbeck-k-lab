@@ -125,15 +125,17 @@ export default function HWEducation() {
 
   return (
     <div>
-      <CurrentSection text="HW Education" />
-      <CurrentDepth depth={["Programs", "HW Education"]} />
+      <CurrentSection text="Digital Manufacturing Education" />
+      <CurrentDepth depth={["Programs", "Digital Manufacturing Education"]} />
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">
-            K_LAB MAKER SPACE GUIDE
+            K_LAB PROGRAMS GUIDE
           </h4>
-          <h2 className="font-bold text-2xl">Programs - HW Education</h2>
+          <h2 className="font-bold text-2xl">
+            Programs - Digital Manufacturing Education
+          </h2>
         </div>
 
         <Tabs

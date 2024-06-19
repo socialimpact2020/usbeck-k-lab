@@ -14,7 +14,7 @@ export default function AdminSidebar() {
       <aside className="w-72 h-full bg-[#182A3E] fixed">
         <div className="w-full bg-[#204162] max-h-40 h-full flex justify-center items-center flex-col space-y-1 relative">
           <span className="text-xs text-gray-400">
-            Uzbekistan K_LAB MAKER SPACE
+            Uzbekistan K-LAB PROGRAMS
           </span>
           <Link href={urls.dashboard} className="text-white text-xl font-bold">
             ADMIN PANEL
@@ -106,7 +106,7 @@ export default function AdminSidebar() {
                     : "text-white"
                 }`}
               >
-                ⦁ &nbsp; SW Education
+                ⦁ &nbsp; IT ACADEMY
               </Link>
               <Link
                 href={urls.dashboardHW}
@@ -116,7 +116,7 @@ export default function AdminSidebar() {
                     : "text-white"
                 }`}
               >
-                ⦁ &nbsp; HW Education
+                ⦁ &nbsp; Digital Manufacturing Education
               </Link>
             </div>
           </div>
