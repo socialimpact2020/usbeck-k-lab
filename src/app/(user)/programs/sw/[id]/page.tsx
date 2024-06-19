@@ -7,8 +7,8 @@ import CurrentSection from "@/components/UI/CurrentSection";
 export default function ProgramDetail() {
   return (
     <div>
-      <CurrentSection text="SW Education" />
-      <CurrentDepth depth={["Programs", "SW Education", "Detail"]} />
+      <CurrentSection text="IT ACADEMY" />
+      <CurrentDepth depth={["Programs", "IT ACADEMY", "Detail"]} />
       <EducationDetail />
     </div>
   );

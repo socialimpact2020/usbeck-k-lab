@@ -15,8 +15,10 @@ import EducationDetail from "@/components/Education/EducationDetail";
 export default function ProgramDetail() {
   return (
     <div>
-      <CurrentSection text="HW Education" />
-      <CurrentDepth depth={["Programs", "HW Education", "Detail"]} />
+      <CurrentSection text="Digital Manufacturing Education" />
+      <CurrentDepth
+        depth={["Programs", "Digital Manufacturing Education", "Detail"]}
+      />
       <EducationDetail />
     </div>
   );
