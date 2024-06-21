@@ -188,7 +188,7 @@ export default function CreateEducation() {
             Select Category
           </option>
           <option value="SW">IT ACADEMY</option>
-          <option value="HW">Digital Manufacturing Education</option>
+          <option value="HW">Digital Manufacturing</option>
         </select>
 
         <select

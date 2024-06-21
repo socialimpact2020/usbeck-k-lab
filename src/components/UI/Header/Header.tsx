@@ -40,7 +40,7 @@ export default function Header() {
               <Link href={urls.sw}>IT ACADEMY</Link>
             </li>
             <li>
-              <Link href={urls.hw}>Digital Manufacturing Education</Link>
+              <Link href={urls.hw}>Digital Manufacturing</Link>
             </li>
           </ul>
         </div>

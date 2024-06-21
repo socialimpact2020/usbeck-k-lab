@@ -23,7 +23,7 @@ export default function EducationList() {
           className="w-36 object-cover mb-5"
         />
         <h1 className="text-3xl text-zinc-600 font-bold mb-10">
-          Digital Manufacturing Education
+          Digital Manufacturing
         </h1>
       </div>
       <DashboardEducationList category="hw" />

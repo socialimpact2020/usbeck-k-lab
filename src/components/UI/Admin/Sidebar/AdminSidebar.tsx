@@ -116,7 +116,7 @@ export default function AdminSidebar() {
                     : "text-white"
                 }`}
               >
-                ⦁ &nbsp; Digital Manufacturing Education
+                ⦁ &nbsp; Digital Manufacturing
               </Link>
             </div>
           </div>
