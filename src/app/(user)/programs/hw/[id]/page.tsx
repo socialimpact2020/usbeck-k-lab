@@ -15,7 +15,11 @@ import EducationDetail from "@/components/Education/EducationDetail";
 export default function ProgramDetail() {
   return (
     <div>
-      <CurrentSection text="Digital Manufacturing" />
+      <CurrentSection
+        text="Digital Manufacturing"
+        imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_programs_banner.webp"
+        styles="bg-blend-darken  bg-black bg-opacity-50"
+      />
       <CurrentDepth depth={["Programs", "Digital Manufacturing", "Detail"]} />
       <EducationDetail />
     </div>

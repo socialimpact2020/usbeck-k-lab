@@ -126,7 +126,11 @@ export default function SWEducation() {
   console.log(data);
   return (
     <div>
-      <CurrentSection text="IT ACADEMY" />
+      <CurrentSection
+        text="IT ACADEMY"
+        imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_programs_banner.webp"
+        styles="bg-blend-darken  bg-black bg-opacity-50"
+      />
       <CurrentDepth depth={["Programs", "IT ACADEMY"]} />
 
       <SectionWrapper>

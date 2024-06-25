@@ -41,10 +41,26 @@ export default function Main() {
           </video>
 
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-            <h2 className="text-6xl text-white font-bold shadow-sm mb-10">
+            <h2 className="text-6xl text-white font-bold shadow-sm mb-5">
               Uzbekistan K-LAB
             </h2>
 
+            <div className="w-[600px] h-[2px] border border-[#585858] mb-5" />
+
+            <div className="mb-10">
+              <p className="text-white">
+                K-LAB Uzbekistan is a digital innovation space where Uzbek youth
+                explore new possibilities
+              </p>
+              <p className="text-white">
+                through the latest IT technologies and creative digital
+                manufacturing solutions,
+              </p>
+
+              <p className="text-white">
+                leading the transformation of the digital silk road era.
+              </p>
+            </div>
             <button className="text-white bg-gradient-to-r from-cyan-900  to-cyan-600 py-2 px-10 rounded-md shadow-lg text-lg">
               <Link href={urls.aboutus}>Enter </Link>
             </button>
