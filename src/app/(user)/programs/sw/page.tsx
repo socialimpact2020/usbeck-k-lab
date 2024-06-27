@@ -136,7 +136,7 @@ export default function SWEducation() {
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">
-            K_LAB PROGRAMS GUIDE
+            K-LAB PROGRAMS GUIDE
           </h4>
           <h2 className="font-bold text-2xl">Programs - IT ACADEMY</h2>
         </div>

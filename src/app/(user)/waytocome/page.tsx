@@ -32,7 +32,7 @@ export default function WaytoCome() {
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">
-            K_LAB MAKER SPACE GUIDE
+            K-LAB MAKER SPACE GUIDE
           </h4>
           <h2 className="font-bold text-2xl">Way to come</h2>
         </div>

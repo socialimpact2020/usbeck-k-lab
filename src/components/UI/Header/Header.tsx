@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "@/images/logo.jpg";
+import logo from "@/images/logo.png";
 import Link from "next/link";
 import { urls } from "@/config/site";
 
@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="flex items-center max-w-7xl justify-between m-auto py-8">
       <Link href={urls.home}>
-        <Image src={logo} alt="header logo" className="w-48 object-cover" />
+        <Image src={logo} alt="header logo" className="w-36 object-cover" />
       </Link>
 
       <nav className="space-x-5">

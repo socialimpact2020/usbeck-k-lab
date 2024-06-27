@@ -30,17 +30,19 @@ export default function Main() {
     <>
       <Header />
       <div className="mb-10">
-        <div className="bg-gray-950 relative">
-          <video
-            muted
-            autoPlay
-            loop
-            className="opacity-[0.5]  h-[720px] w-full object-fill"
-          >
-            <source src="https://d2p8484c990lgc.cloudfront.net/KLAB/next/background-video.mp4" />
-          </video>
-
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+        <div className="bg-white relative">
+          <div className="relative w-full max-w-7xl m-auto">
+            <video
+              muted
+              autoPlay
+              loop
+              className="h-[720px] w-full bg-white  w-full z-20"
+            >
+              <source src="https://d2p8484c990lgc.cloudfront.net/KLAB/next/background-video.mp4" />
+            </video>
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          </div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-20">
             <h2 className="text-6xl text-white font-bold shadow-sm mb-5">
               Uzbekistan K-LAB
             </h2>
