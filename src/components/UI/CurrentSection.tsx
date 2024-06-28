@@ -6,7 +6,7 @@ interface ICurrentSection {
 
 export default function CurrentSection({
   text,
-  imageUrl = "https://d2p8484c990lgc.cloudfront.net/KLAB/next/section_bg.jpg",
+  imageUrl,
   styles = "",
 }: ICurrentSection) {
   return (

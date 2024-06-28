@@ -19,7 +19,11 @@ export default function Post() {
   if (isLoading) {
     return (
       <div>
-        <CurrentSection text="Notice" />
+        <CurrentSection
+          text="News"
+          imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_board_banner.webp"
+          styles="bg-cover"
+        />
         <CurrentDepth depth={["Boards", "News", "Detail"]} />
 
         <SectionWrapper>
@@ -42,7 +46,7 @@ export default function Post() {
   return (
     <div>
       <CurrentSection
-        text="Notice"
+        text="News"
         imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_board_banner.webp"
         styles="bg-cover"
       />
