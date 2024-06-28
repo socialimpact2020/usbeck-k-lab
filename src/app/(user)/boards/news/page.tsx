@@ -39,14 +39,16 @@ export default function News() {
 
   return (
     <div>
-      <CurrentSection text="News" />
+      <CurrentSection
+        text="News"
+        imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_board_banner.webp"
+        styles="bg-cover"
+      />
       <CurrentDepth depth={["Boards", "News"]} />
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
-          <h4 className="text-gray-400 text-sm font-bold">
-            K-LAB MAKER SPACE GUIDE
-          </h4>
+          <h4 className="text-gray-400 text-sm font-bold">K-LAB GUIDE</h4>
           <h2 className="font-bold text-2xl">News</h2>
         </div>
 

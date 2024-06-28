@@ -25,9 +25,7 @@ export default function Post() {
 
         <SectionWrapper>
           <div className="text-center space-y-2 mb-10">
-            <h4 className="text-gray-400 text-sm font-bold">
-              K-LAB MAKER SPACE GUIDE
-            </h4>
+            <h4 className="text-gray-400 text-sm font-bold">K-LAB GUIDE</h4>
             <h2 className="font-bold text-2xl">Notice</h2>
           </div>
           <div className="w-full flex justify-center h-96">
@@ -45,14 +43,16 @@ export default function Post() {
 
   return (
     <div>
-      <CurrentSection text="Notice" />
+      <CurrentSection
+        text="Notice"
+        imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_board_banner.webp"
+        styles="bg-cover"
+      />
       <CurrentDepth depth={["Boards", "Notice", "Detail"]} />
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
-          <h4 className="text-gray-400 text-sm font-bold">
-            K-LAB MAKER SPACE GUIDE
-          </h4>
+          <h4 className="text-gray-400 text-sm font-bold">K-LAB GUIDE</h4>
           <h2 className="font-bold text-2xl">{data && data.type}</h2>
         </div>
 

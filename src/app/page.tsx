@@ -14,11 +14,11 @@ import { Metadata } from "next";
 import Home from "@/components/client/Home";
 
 export const metadata: Metadata = {
-  title: `Home | Uzbekistan K_LAB MAKER SPACE`,
+  title: `Home | Uzbekistan K_LAB`,
   description:
     "By supporting K_LAB applying Korea's advanced technologies and systems, Uzbekistan will strengthen its national technical manpower capabilities and create economic opportunities in the ICT sector",
   openGraph: {
-    title: "Uzbekistan K_LAB MAKER SPACE",
+    title: "Uzbekistan K_LAB",
     url: "https://www.nipak-labuzb.co.kr",
     type: "website",
     images: "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png",

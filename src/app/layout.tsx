@@ -9,8 +9,8 @@ import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nipak-labuzb.co.kr"),
-  title: "Uzbekistan K_LAB MAKER SPACE",
-  description: "Uzbekistan K_LAB MAKER SPACE",
+  title: "Uzbekistan K_LAB ",
+  description: "Uzbekistan K_LAB ",
 };
 
 export default function RootLayout({

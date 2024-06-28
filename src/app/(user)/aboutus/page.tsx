@@ -10,11 +10,11 @@ import Image from "next/image";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: `About US | Uzbekistan K_LAB MAKER SPACE`,
+  title: `About US | Uzbekistan K_LAB`,
   description:
     "By supporting K_LAB applying Korea's advanced technologies and systems, Uzbekistan will strengthen its national technical manpower capabilities and create economic opportunities in the ICT sector",
   openGraph: {
-    title: "Uzbekistan K_LAB MAKER SPACE",
+    title: "Uzbekistan K_LAB",
     url: "https://www.nipak-labuzb.co.kr/aboutus",
     type: "website",
     images: [
@@ -30,7 +30,11 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <div>
-      <CurrentSection text="About Us" />
+      <CurrentSection
+        text="About Us"
+        imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_about_banner..webp"
+        styles="bg-cover"
+      />
       <CurrentDepth depth={["Center", "About Us"]} />
 
       <SectionWrapper>
