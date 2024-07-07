@@ -13,8 +13,11 @@ export default function Card({
   };
 
   const isActive =
-    new Date(recruitmentPeriod.startDate) <= new Date() &&
-    new Date() <= new Date(recruitmentPeriod.endDate);
+    new Date(recruitmentPeriod.startDate).getTime() <= new Date().getTime() &&
+    new Date().getTime() <=
+      new Date(
+        new Date(recruitmentPeriod.endDate).setHours(23, 59, 59, 999)
+      ).getTime();
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
