@@ -33,7 +33,9 @@ export async function GET() {
       take: 5,
     });
 
-    return NextResponse.json({ ok: true, courses, notices, news });
+    const response = NextResponse.json({ ok: true, courses, notices, news });
+    response.headers.set("Cache-Control", "public, max-age=0, must-revalidate"); // 캐싱 최소화
+    return response;
   } catch (err) {
     return NextResponse.json({ ok: false, message: err });
   }

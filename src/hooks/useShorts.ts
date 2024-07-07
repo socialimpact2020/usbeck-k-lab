@@ -20,7 +20,12 @@ export interface IResponseMain {
 }
 
 export default function useShorts() {
-  const { data, isLoading } = useSWR<IResponseMain>("/api/index");
+  const { data, isLoading } = useSWR<IResponseMain>("/api/index", {
+    revalidateOnFocus: true, // 포커스 시 재검증
+    revalidateOnReconnect: true, // 재연결 시 재검증
+    refreshInterval: 30000, // 30초마다 데이터 갱신
+    dedupingInterval: 5000, // 5초마다 중복 요청 허용
+  });
 
   return {
     data,
