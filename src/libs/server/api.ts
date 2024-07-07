@@ -7,7 +7,8 @@ interface IResponsePostDetail {
 
 export async function getPostDetail(id: string): Promise<Post | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_API_URL || "https://www.nipak-labuzb.co.kr";
     const response = await fetch(`${baseUrl}/api/post/detail/${id}`, {
       next: { revalidate: 60 },
     });
@@ -61,7 +62,8 @@ export async function fetchProgramData(
   programType: "hw" | "sw"
 ): Promise<ProgramResponse | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_API_URL || "https://www.nipak-labuzb.co.kr";
     const response = await fetch(`${baseUrl}/api/edu/${id}`, {
       next: { revalidate: 60 },
     });
