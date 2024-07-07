@@ -2,6 +2,8 @@ import client from "@/libs/server/prisma";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse, NextRequest } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     console.log("Fetching data...");
