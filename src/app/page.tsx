@@ -13,6 +13,8 @@ import Loading from "@/components/UI/Loading";
 import { Metadata } from "next";
 import Home from "@/components/client/Home";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: `Home | Uzbekistan K_LAB`,
   description:
