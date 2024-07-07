@@ -1,44 +1,45 @@
-"use client";
 import PostDetail from "@/components/Boards/PostDetail";
 import CurrentDepth from "@/components/UI/CurrentDepth";
 import CurrentSection from "@/components/UI/CurrentSection";
-import Loading from "@/components/UI/Loading";
 import SectionWrapper from "@/components/UI/SectionWrapper";
-import { suitFont } from "@/config/font";
-import usePostDetail from "@/hooks/usePostDetail";
-import DOMPurify from "dompurify";
-import { useParams, useRouter } from "next/navigation";
+import { getPostDetail } from "@/libs/server/api";
+import { Metadata, ResolvingMetadata } from "next";
+import { notFound } from "next/navigation";
 
-import { useEffect, useState } from "react";
+type Props = {
+  params: { id: string };
+};
 
-export default function Post() {
-  const { id } = useParams();
-  const router = useRouter();
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const id = params.id;
+  const post = await getPostDetail(id);
 
-  const { data, isLoading } = usePostDetail(id + "");
+  const stripHtml = (html: string) => {
+    return html.replace(/<[^>]*>?/gm, "");
+  };
 
-  if (isLoading) {
-    return (
-      <div>
-        <CurrentSection text="Notice" />
-        <CurrentDepth depth={["Boards", "Notice", "Detail"]} />
+  const description = post?.content
+    ? stripHtml(post.content).substring(0, 160)
+    : "Notice Detail";
 
-        <SectionWrapper>
-          <div className="text-center space-y-2 mb-10">
-            <h4 className="text-gray-400 text-sm font-bold">K-LAB GUIDE</h4>
-            <h2 className="font-bold text-2xl">Notice</h2>
-          </div>
-          <div className="w-full flex justify-center h-96">
-            <Loading />
-          </div>
-        </SectionWrapper>
-      </div>
-    );
-  }
+  return {
+    title: post?.title || "Notice",
+    description: description,
+  };
+}
 
-  if (!isLoading && !data) {
-    router.push("/404");
-    return null;
+export default async function Post({ params }: { params: { id: string } }) {
+  const { id } = params;
+  const data = await getPostDetail(id);
+
+  console.log(id);
+  console.log(data);
+
+  if (!data) {
+    notFound();
   }
 
   return (
@@ -53,10 +54,10 @@ export default function Post() {
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
           <h4 className="text-gray-400 text-sm font-bold">K-LAB GUIDE</h4>
-          <h2 className="font-bold text-2xl">{data && data.type}</h2>
+          <h2 className="font-bold text-2xl">{data.type}</h2>
         </div>
 
-        {data && <PostDetail data={data} />}
+        <PostDetail data={data} />
       </SectionWrapper>
     </div>
   );

@@ -1,28 +1,25 @@
 import { UseFormRegister } from "react-hook-form";
 
-interface IIconInput {
-  text?: string;
-  children?: React.ReactNode;
-  className?: string;
+interface IconInputProps {
+  text: string;
   register: UseFormRegister<any>;
+  children: React.ReactNode;
 }
 
 export default function IconInput({
   text,
-  className = "",
-  children,
   register,
-}: IIconInput) {
+  children,
+}: IconInputProps) {
   return (
-    <label className="form-control w-full">
+    <div className="relative w-full max-w-xl">
       <input
         type="text"
         placeholder={text}
-        className={`input input-bordered w-full !outline-gray-600 ${className}`}
+        className="w-full h-14 text-xl text-center rounded-lg shadow-md input input-bordered"
         {...register("search")}
       />
-
       {children}
-    </label>
+    </div>
   );
 }

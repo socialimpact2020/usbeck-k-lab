@@ -1,45 +1,27 @@
+import { CourseDetail } from "@/types/course";
 import Image from "next/image";
-import dummyImage from "@/images/dummy1.jpg";
-import comingSoonImg from "@/images/img_loading.jpg";
-import Link from "next/link";
-import {
-  Category,
-  Course,
-  ProgressPeriod,
-  RecruitmentPeriod,
-  Subcategory,
-} from "@prisma/client";
 
-interface ICardProps {
-  id: number;
-  category: Category;
-  subcategory: Subcategory;
-  thumbnailURL: string;
-  title: string;
-  linkURL: string;
-  content: string;
-  createdAt: Date;
-  updatedAt: Date;
-  recruitmentPeriodId: number;
-  progressPeriodId: number;
-  recruitmentPeriod: RecruitmentPeriod;
-  progressPeriod: ProgressPeriod;
-}
+export default function Card({
+  title,
+  thumbnailURL,
+  recruitmentPeriod,
+  progressPeriod,
+}: CourseDetail) {
+  const formatDate = (date: Date | string) => {
+    const dateObject = date instanceof Date ? date : new Date(date);
+    return dateObject.toISOString().slice(0, 10);
+  };
 
-export default function Card(course: ICardProps) {
+  const isActive =
+    new Date(recruitmentPeriod.startDate) <= new Date() &&
+    new Date() <= new Date(recruitmentPeriod.endDate);
+
   return (
-    <div className="card w-72 bg-base-100 shadow-xl relative">
-      <figure>
-        <Image
-          src={course.thumbnailURL}
-          alt="course-thumbnail"
-          width={300}
-          height={300}
-          className="object-cover w-full h-[256px]"
-        />
-
-        {new Date(course.recruitmentPeriod.startDate) <= new Date() &&
-        new Date() <= new Date(course.recruitmentPeriod.endDate) ? (
+    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+      <div className="relative h-64">
+        <Image src={thumbnailURL} alt={title} layout="fill" objectFit="cover" />
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        {isActive ? (
           <div className="absolute top-3 left-3 bg-cyan-700 text-white rounded-full px-2 py-2 text-xs">
             ACTIVE
           </div>
@@ -48,15 +30,33 @@ export default function Card(course: ICardProps) {
             DEACTIVE
           </div>
         )}
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title text-[18px]">
-          {course.title.slice(0, 20) + "..."}
-        </h2>
-
-        <p className="text-end text-gray-500">
-          ~{course.recruitmentPeriod.endDate.toString().split("T")[0]}
-        </p>
+      </div>
+      <div className="p-4 flex-grow flex flex-col">
+        <h3 className="font-bold text-lg mb-4 overflow-hidden whitespace-nowrap text-ellipsis">
+          {title}
+        </h3>
+        <div className="mt-auto space-y-1">
+          <div className="flex text-xs text-gray-400">
+            <span className="w-20 flex-shrink-0">모집기간:</span>
+            <span className="flex-grow grid grid-cols-[1fr,auto,1fr] gap-1">
+              <span>{formatDate(recruitmentPeriod.startDate)}</span>
+              <span>~</span>
+              <span className="text-right">
+                {formatDate(recruitmentPeriod.endDate)}
+              </span>
+            </span>
+          </div>
+          <div className="flex text-xs text-gray-400">
+            <span className="w-20 flex-shrink-0">교육기간:</span>
+            <span className="flex-grow grid grid-cols-[1fr,auto,1fr] gap-1">
+              <span>{formatDate(progressPeriod.startDate)}</span>
+              <span>~</span>
+              <span className="text-right">
+                {formatDate(progressPeriod.endDate)}
+              </span>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

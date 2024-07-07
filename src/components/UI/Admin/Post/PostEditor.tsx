@@ -51,6 +51,7 @@ const formats = [
   "indent",
   "link",
   "image",
+  "video",
 ];
 
 type IPresignedResponse = {
@@ -144,6 +145,37 @@ export default function PostEditor({
       }
     });
   };
+
+  function getVideoUrl(url: any) {
+    const match = url.match(
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)$/
+    );
+
+    if (match && match[1]) {
+      return `https://www.youtube.com/embed/${match[1]}`;
+    }
+    return null;
+  }
+
+  const videoHandler = () => {
+    const editor = quillRef?.current?.getEditor?.();
+    const range = editor?.getSelection?.();
+    let url = prompt("YouTube 동영상 URL을 입력하세요: ");
+
+    if (url === null) {
+      return;
+    }
+
+    const videoUrl = getVideoUrl(url);
+
+    if (videoUrl && editor && range) {
+      editor.insertEmbed(range.index, "video", videoUrl);
+      editor.setSelection(range.index + 1, 0);
+    } else {
+      alert("유효한 YouTube URL이 아닙니다.");
+    }
+  };
+
   const modules = useMemo(
     () => ({
       toolbar: {
@@ -152,9 +184,9 @@ export default function PostEditor({
           [{ size: [] }],
           ["bold", "italic", "underline", "strike", "blockquote"],
           [{ list: "ordered" }, { list: "bullet" }, { align: [] }],
-          ["image"],
+          ["image", "video"],
         ],
-        handlers: { image: imageHandler },
+        handlers: { image: imageHandler, video: videoHandler },
       },
       clipboard: {
         matchVisual: false,

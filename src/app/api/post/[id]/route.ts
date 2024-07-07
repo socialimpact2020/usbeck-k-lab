@@ -2,6 +2,7 @@ import { NextApiResponse } from "next";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 import client from "@/libs/server/prisma";
+import sanitizeHtml from "sanitize-html";
 
 export async function PUT(
   req: NextRequest,
@@ -16,6 +17,22 @@ export async function PUT(
 
   try {
     const data = await req.json();
+
+    console.log(data);
+
+    const sanitizedContent = sanitizeHtml(data.content, {
+      allowedTags: sanitizeHtml.defaults.allowedTags.concat(["iframe"]),
+      allowedAttributes: {
+        ...sanitizeHtml.defaults.allowedAttributes,
+        iframe: ["src", "frameborder", "allowfullscreen"],
+      },
+      allowedIframeHostnames: ["www.youtube.com", "player.vimeo.com"],
+    });
+
+    await client.post.update({
+      data: { ...data, content: sanitizedContent },
+      where: { id: Number(params.id) },
+    });
     await client.post.update({ data, where: { id: Number(params.id) } });
   } catch (err) {
     NextResponse.json({ ok: false, message: err }, { status: 500 });

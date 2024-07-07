@@ -1,9 +1,15 @@
+interface SectionWrapperProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
 export default function SectionWrapper({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  className = "",
+}: SectionWrapperProps) {
   return (
-    <section className="max-w-7xl m-auto py-28 relative">{children}</section>
+    <section className={`max-w-7xl m-auto pt-28 pb-14 relative ${className}`}>
+      {children}
+    </section>
   );
 }

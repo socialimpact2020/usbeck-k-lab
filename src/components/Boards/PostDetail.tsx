@@ -20,10 +20,36 @@ export default function PostDetail({ data }: IPostDetailProps) {
   const [contentHTML, setContentHTML] = useState<string>("");
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      DOMPurify.addHook("afterSanitizeAttributes", function (node) {
+        if (node.tagName === "IFRAME") {
+          const src = node.getAttribute("src");
+          if (src && src.startsWith("https://www.youtube.com/embed/")) {
+            node.setAttribute("frameborder", "0");
+            node.setAttribute("allowfullscreen", "true");
+          } else {
+            node.remove();
+          }
+        }
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     if (data) {
-      const sanitizedContent = DOMPurify.sanitize(data.content);
+      const sanitizedContent = DOMPurify.sanitize(data.content, {
+        ADD_TAGS: ["iframe"],
+        ADD_ATTR: [
+          "allow",
+          "allowfullscreen",
+          "frameborder",
+          "src",
+          "alt",
+          "title",
+        ],
+        ALLOWED_URI_REGEXP: /^(?:(?:(?:f|ht)tps?:)?\/\/)|(?:data:image\/)/i,
+      });
       setContentHTML(sanitizedContent);
-    } else {
     }
   }, [data]);
 

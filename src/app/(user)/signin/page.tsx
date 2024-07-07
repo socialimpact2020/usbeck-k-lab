@@ -1,31 +1,24 @@
 "use client";
-import React, { useRef } from "react";
-import { SessionProvider, signIn, useSession } from "next-auth/react";
-import Header from "@/components/UI/Header/Header";
-import Footer from "@/components/UI/Footer/Footer";
-import SectionWrapper from "@/components/UI/SectionWrapper";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
+import React from "react";
+import { signIn } from "next-auth/react";
+import { useForm, SubmitHandler, UseFormRegister } from "react-hook-form";
 import Swal from "sweetalert2";
-import { redirect, useRouter } from "next/navigation";
-import { getServerSession } from "next-auth";
+import { useRouter } from "next/navigation";
 
-type Inputs = {
+type SignInInputs = {
   id: string;
   password: string;
 };
 
-export default function SignIn() {
+const useSignInForm = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
-  } = useForm<Inputs>();
+  } = useForm<SignInInputs>();
 
-  const router = useRouter();
-
-  const onSubmit: SubmitHandler<Inputs> = async ({ id, password }) => {
+  const onSubmit: SubmitHandler<SignInInputs> = async ({ id, password }) => {
     const result = await signIn("credentials", {
       id,
       password,
@@ -49,37 +42,58 @@ export default function SignIn() {
     }
   };
 
+  return { register, handleSubmit, errors, onSubmit };
+};
+
+const InputField: React.FC<{
+  type: string;
+  placeholder: string;
+  register: UseFormRegister<SignInInputs>;
+  name: keyof SignInInputs;
+  required: string;
+  autoFocus?: boolean;
+}> = ({ type, placeholder, register, name, required, autoFocus }) => (
+  <input
+    type={type}
+    placeholder={placeholder}
+    className="w-96 h-14 text-xl text-center rounded-lg shadow-md input input-bordered"
+    {...register(name, { required })}
+    autoFocus={autoFocus}
+  />
+);
+
+export default function SignIn() {
+  const { register, handleSubmit, errors, onSubmit } = useSignInForm();
+
   return (
-    <>
-      <div className="flex justify-center py-20 min-h-dvh items-center flex-col bg-slate-50">
-        <h1 className="text-3xl font-bold mb-10">Sign-in</h1>
+    <div className="flex justify-center py-20 min-h-dvh items-center flex-col bg-slate-50">
+      <h1 className="text-3xl font-bold mb-10">Sign-in</h1>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-5"
-        >
-          <input
-            type="text"
-            placeholder="id here."
-            className="w-96 h-14 text-xl text-center rounded-lg shadow-md input input-bordered"
-            {...register("id", { required: "id field is required." })}
-            autoFocus={true}
-          />
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col space-y-5"
+      >
+        <InputField
+          type="text"
+          placeholder="id here."
+          register={register}
+          name="id"
+          required="id field is required."
+          autoFocus={true}
+        />
 
-          <input
-            type="password"
-            placeholder="password here."
-            className="w-96 h-14 text-xl text-center rounded-lg shadow-md input input-bordered"
-            {...register("password", {
-              required: "password field is required.",
-            })}
-          />
+        <InputField
+          type="password"
+          placeholder="password here."
+          register={register}
+          name="password"
+          required="password field is required."
+        />
 
-          <button className="w-96 h-14 bg-black text-white rounded-lg">
-            Sign-in
-          </button>
-        </form>
-      </div>
-    </>
+        <button className="w-96 h-14 bg-black text-white rounded-lg">
+          Sign-in
+        </button>
+      </form>
+    </div>
   );
 }

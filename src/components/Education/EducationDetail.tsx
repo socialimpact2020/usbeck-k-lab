@@ -1,3 +1,5 @@
+"use client";
+
 import CurrentDepth from "@/components/UI/CurrentDepth";
 import CurrentSection from "@/components/UI/CurrentSection";
 import SectionWrapper from "@/components/UI/SectionWrapper";
@@ -13,8 +15,13 @@ import useCourseDetail from "@/hooks/useCourseDetail";
 import Loading from "@/components/UI/Loading";
 import { useEffect, useState } from "react";
 import DOMPurify from "dompurify";
+import { ProgramResponse } from "@/libs/server/api";
 
-export default function EducationDetail() {
+interface EducationDetailProps {
+  programData: ProgramResponse;
+}
+
+export default function EducationDetail({ programData }: EducationDetailProps) {
   const { id } = useParams();
 
   const { data, isLoading } = useCourseDetail(id + "");
@@ -22,10 +29,36 @@ export default function EducationDetail() {
   const [contentHTML, setContentHTML] = useState<string>("");
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      DOMPurify.addHook("afterSanitizeAttributes", function (node) {
+        if (node.tagName === "IFRAME") {
+          const src = node.getAttribute("src");
+          if (src && src.startsWith("https://www.youtube.com/embed/")) {
+            node.setAttribute("frameborder", "0");
+            node.setAttribute("allowfullscreen", "true");
+          } else {
+            node.remove(); // YouTube 이외의 iframe 제거
+          }
+        }
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     if (data) {
-      const sanitizedContent = DOMPurify.sanitize(data.content);
+      const sanitizedContent = DOMPurify.sanitize(data.content, {
+        ADD_TAGS: ["iframe"],
+        ADD_ATTR: [
+          "allow",
+          "allowfullscreen",
+          "frameborder",
+          "src",
+          "alt",
+          "title",
+        ],
+        ALLOWED_URI_REGEXP: /^(?:(?:(?:f|ht)tps?:)?\/\/)|(?:data:image\/)/i,
+      });
       setContentHTML(sanitizedContent);
-    } else {
     }
   }, [data]);
 

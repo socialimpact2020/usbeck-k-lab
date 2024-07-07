@@ -6,36 +6,33 @@ import { urls } from "@/config/site";
 
 import { signOut, useSession } from "next-auth/react";
 
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 export default function Header() {
   const { data: session } = useSession();
+  const pathname = usePathname();
 
   return (
     <header className="flex items-center max-w-7xl justify-between m-auto py-8">
       <Link href={urls.home}>
-        <Image src={logo} alt="header logo" className="w-36 object-cover" />
+        <Image src={logo} alt="header logo" className="w-44 object-cover" />
       </Link>
 
       <nav className="space-x-5">
-        <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="m-1">
-            <Link href={urls.aboutus}>About Us</Link>
-          </div>
-        </div>
+        <Link href={urls.aboutus} className="">
+          About Us
+        </Link>
+        <Link href={urls.waytocome} className="">
+          Way to come
+        </Link>
 
-        <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="m-1">
-            <Link href={urls.waytocome}>Way to come</Link>
-          </div>
-        </div>
-
-        <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="m-1">
-            Programs
-          </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[220px]"
-          >
+        <div className="dropdown dropdown-hover group">
+          <Link href={urls.programs} className="">
+            <span tabIndex={0} className="cursor-pointer">
+              Programs
+            </span>
+          </Link>
+          <ul className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-[220px] hidden group-hover:block">
             <li>
               <Link href={urls.sw}>IT ACADEMY</Link>
             </li>
@@ -45,14 +42,13 @@ export default function Header() {
           </ul>
         </div>
 
-        <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="m-1">
-            Board
-          </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-28 -left-16"
-          >
+        <div className="dropdown dropdown-hover group">
+          <Link href={urls.notice} className="">
+            <span tabIndex={0} className="cursor-pointer">
+              Board
+            </span>
+          </Link>
+          <ul className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-28 -left-16 hidden group-hover:block">
             <li>
               <Link href={urls.notice}>Notice</Link>
             </li>
@@ -63,18 +59,14 @@ export default function Header() {
         </div>
 
         {session && (
-          <div className="dropdown dropdown-hover">
-            <div tabIndex={0} role="button" className="m-1">
-              <Link href={urls.dashboard}>Dashboard</Link>
-            </div>
-          </div>
+          <Link href={urls.dashboard} className="">
+            Dashboard
+          </Link>
         )}
         {session && (
-          <div className="dropdown dropdown-hover">
-            <div tabIndex={0} role="button" className="m-1">
-              <span onClick={() => signOut()}>Sign out</span>
-            </div>
-          </div>
+          <span onClick={() => signOut()} className="cursor-pointer ">
+            Sign out
+          </span>
         )}
       </nav>
     </header>
