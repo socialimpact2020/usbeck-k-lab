@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 import usePaginationSearch from "@/hooks/usePaginationSearch";
 
 interface DashboardPostListProps {
-  postType: "notice" | "news";
+  postType: "notice" | "news" | "ot";
 }
 
 const DashboardPostList: React.FC<DashboardPostListProps> = ({ postType }) => {

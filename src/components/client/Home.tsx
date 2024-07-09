@@ -132,7 +132,8 @@ export default function Home() {
     <>
       <div className="grid grid-cols-1 max-w-7xl m-auto mt-10 gap-20">
         <div>
-          <SectionHeader title="Programs" moreLink={urls.sw} />
+          <SectionHeader title="Programs" moreLink={urls.programs} />
+
           <div className="mt-5 flex mb-5 justify-start gap-8">
             {data &&
               data.courses?.map((course) => (

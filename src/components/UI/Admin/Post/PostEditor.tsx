@@ -52,6 +52,7 @@ const formats = [
   "link",
   "image",
   "video",
+  "align",
 ];
 
 type IPresignedResponse = {
@@ -200,7 +201,7 @@ export default function PostEditor({
       theme="snow"
       value={value}
       onChange={onChangeHandler}
-      style={{ height: "400px", width: "1100px" }}
+      style={{ height: "400px" }}
       modules={modules}
       formats={formats}
       forwardedRef={quillRef}

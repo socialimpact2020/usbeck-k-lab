@@ -42,7 +42,7 @@ interface ISearchForm {
   search: string;
 }
 
-const usePaginationSearch = (boardType: "notice" | "news") => {
+const usePaginationSearch = (boardType: "notice" | "news" | "ot") => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialPage = Number(searchParams.get("page")) || 1;

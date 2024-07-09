@@ -7,6 +7,7 @@ export const urls = {
   programs: "/programs",
   sw: "/programs/sw",
   hw: "/programs/hw",
+  ot: "/programs/ot",
   dashboard: "/dashboard",
   dashboardFooter: "/dashboard/footer",
   dashboardBoards: "/dashboard/boards",
@@ -15,9 +16,6 @@ export const urls = {
   dashboardSW: "/dashboard/sw",
   dashboardHW: "/dashboard/hw",
   dashboardEducationNew: "/dashboard/edu/new",
-
 } as const;
 
 export type UrlKeys = keyof typeof urls;
-
-

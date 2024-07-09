@@ -43,10 +43,22 @@ export default function DashboardCombinedList() {
         >
           News
         </button>
+
+        <button
+          className={`tab-btn px-4 py-2 ${
+            selectedTab === "ot"
+              ? "btn-active bg-black text-white  rounded-full"
+              : ""
+          }`}
+          onClick={() => handleTabChange("ot")}
+        >
+          Online Training
+        </button>
       </div>
 
       {selectedTab === "notice" && <DashboardPostList postType="notice" />}
       {selectedTab === "news" && <DashboardPostList postType="news" />}
+      {selectedTab === "ot" && <DashboardPostList postType="ot" />}
     </div>
   );
 }

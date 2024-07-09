@@ -45,8 +45,6 @@ export default function ProgramSection({
   if (error) return <div>데이터를 불러오는 데 실패했습니다.</div>;
   if (!data) return null;
 
-  console.log(data);
-
   const courses = data[type];
 
   return (
@@ -54,7 +52,7 @@ export default function ProgramSection({
       <div className="text-center mb-10">
         <h4 className="text-gray-400 text-sm font-bold mb-2">{subtitle}</h4>
         <h2 className="font-bold text-2xl mb-10">{title}</h2>
-        <div className="flex items-center justify-end space-x-2 ">
+        <div className="flex items-center justify-end space-x-2 border-gray-300 border-b pb-1">
           <Link href={urls[type]} className="text-md text-gray-500">
             More
           </Link>

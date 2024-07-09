@@ -18,8 +18,6 @@ export async function PUT(
   try {
     const data = await req.json();
 
-    console.log(data);
-
     const sanitizedContent = sanitizeHtml(data.content, {
       allowedTags: sanitizeHtml.defaults.allowedTags.concat(["iframe"]),
       allowedAttributes: {

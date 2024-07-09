@@ -69,6 +69,7 @@ export default function CreatePost() {
           </option>
           <option value="Notice">Notice</option>
           <option value="News">News</option>
+          <option value="ot">Online Training</option>
         </select>
 
         <input

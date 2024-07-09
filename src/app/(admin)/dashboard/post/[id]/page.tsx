@@ -84,6 +84,7 @@ export default function EditPost({ params }: { params: { id: string } }) {
           </option>
           <option value="Notice">Notice</option>
           <option value="News">News</option>
+          <option value="ot">Online Training</option>
         </select>
 
         <input

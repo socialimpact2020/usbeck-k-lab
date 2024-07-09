@@ -39,6 +39,9 @@ export default function Header() {
             <li>
               <Link href={urls.hw}>Digital Manufacturing</Link>
             </li>
+            <li>
+              <Link href={urls.ot}>Online Training</Link>
+            </li>
           </ul>
         </div>
 

@@ -79,7 +79,19 @@ th {
 
 .ql-editor .ql-video,
 .sanitized-parent .ql-video {
-  max-width: 80% !important;
+  max-width: 100% !important;
   width: 100%;
-  height: 500px;
+  height: 700px;
+}
+
+.sanitized-parent .ql-align-left {
+  text-align: left;
+}
+
+.sanitized-parent .ql-align-center {
+  text-align: center;
+}
+
+.sanitized-parent .ql-align-right {
+  text-align: center;
 }

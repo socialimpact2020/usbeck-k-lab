@@ -10,7 +10,10 @@ interface IResponsePosts {
   totalPage: number;
 }
 
-export default function usePosts(type: "notice" | "news", search: string | "") {
+export default function usePosts(
+  type: "notice" | "news" | "ot",
+  search: string | ""
+) {
   const searchParams = useSearchParams();
   const page = searchParams.get("page") || "1";
 
