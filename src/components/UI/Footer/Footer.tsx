@@ -1,7 +1,7 @@
 "use client";
 import useInfo from "@/hooks/useInfo";
-import footerLeft from "@/images/footer_left_logo.png";
-import footerRight from "@/images/footer_right_logo.png";
+import footerLeft from "@/images/footer_company1.png";
+import footerRight from "@/images/footer_company2.png";
 import Image from "next/image";
 
 export default function Footer() {
@@ -10,7 +10,20 @@ export default function Footer() {
   return (
     <footer className="bg-[#D9D9D9] py-3">
       <div className="max-w-7xl m-auto flex items-center justify-between">
-        <Image src={footerLeft} alt="footer-left-image" className="w-40" />
+        <div className="py-5">
+          <p className="font-bold text-lg">
+            <span className="border-b-2 border-black pb-1">M</span>anagement
+            Team
+          </p>
+          <div className="flex items-center space-x-6 mt-6">
+            <Image src={footerLeft} alt="footer-left-image" className="w-36" />
+            <Image
+              src={footerRight}
+              alt="footer-right-image"
+              className="w-36"
+            />
+          </div>
+        </div>
         <div className="space-y-1">
           <p className="text-black font-bold text-sm">{info?.address}</p>
 
@@ -22,7 +35,6 @@ export default function Footer() {
             reversed
           </p>
         </div>
-        <Image src={footerRight} alt="footer-right-image" className="w-52" />
       </div>
     </footer>
   );

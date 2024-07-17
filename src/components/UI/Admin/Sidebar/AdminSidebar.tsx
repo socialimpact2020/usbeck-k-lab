@@ -59,7 +59,7 @@ export default function AdminSidebar() {
             <div className="collapse-title text-md font-medium text-white">
               Profile
             </div>
-            <div className="collapse-content">
+            <div className="collapse-content flex flex-col space-y-2">
               <Link
                 href={urls.dashboard}
                 className={`text-xs ${
@@ -69,6 +69,17 @@ export default function AdminSidebar() {
                 }`}
               >
                 ⦁ &nbsp; Profile Update
+              </Link>
+
+              <Link
+                href={urls.dashboardBanners}
+                className={`text-xs ${
+                  isCurrentRoute(urls.dashboardBanners)
+                    ? "text-cyan-500 font-bold"
+                    : "text-white"
+                }`}
+              >
+                ⦁ &nbsp; Banners Update
               </Link>
             </div>
           </div>

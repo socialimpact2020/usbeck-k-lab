@@ -12,11 +12,18 @@ interface IPostShorts {
   type: string;
   createdAt: Date;
 }
+
+interface IBanners {
+  id: number;
+  bannerImageURL: string;
+}
 export interface IResponseMain {
   ok: boolean;
   courses: CourseDetail[];
   notices: IPostShorts[];
   news: IPostShorts[];
+  ot: IPostShorts[];
+  banners: IBanners[];
 }
 
 export default function useShorts() {

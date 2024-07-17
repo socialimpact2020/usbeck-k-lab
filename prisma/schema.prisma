@@ -66,6 +66,13 @@ model Course {
   @@index([progressPeriodId], map: "progressPeriodId_index")
 }
 
+model Banner {
+  id Int @id @default(autoincrement())
+  bannerImageURL String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 enum Category {
   SW
   HW

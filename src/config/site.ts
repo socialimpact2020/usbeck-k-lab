@@ -16,6 +16,7 @@ export const urls = {
   dashboardSW: "/dashboard/sw",
   dashboardHW: "/dashboard/hw",
   dashboardEducationNew: "/dashboard/edu/new",
+  dashboardBanners: "/dashboard/banners",
 } as const;
 
 export type UrlKeys = keyof typeof urls;

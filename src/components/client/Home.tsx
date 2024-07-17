@@ -4,6 +4,7 @@ import useShorts from "@/hooks/useShorts";
 import Link from "next/link";
 import Loading from "../UI/Loading";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 // 날짜 포맷팅 함수
 const formatDate = (date: string) => {
@@ -118,6 +119,35 @@ const PostList = ({
   </div>
 );
 
+const BannerSlide = ({ banners }: { banners: any[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 2000);
+
+    return () => clearInterval(timer);
+  }, [banners.length]);
+
+  return (
+    <div className="relative w-full h-40 overflow-hidden">
+      {banners.map((banner, index) => (
+        <Image
+          key={banner.id}
+          src={banner.bannerImageURL}
+          alt={`Banner ${index + 1}`}
+          layout="fill"
+          objectFit="cover"
+          className={`absolute transition-opacity duration-500 ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+    </div>
+  );
+};
+
 export default function Home() {
   const { data, isLoading } = useShorts();
 
@@ -130,7 +160,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="grid grid-cols-1 max-w-7xl m-auto mt-10 gap-20">
+      <div className="grid grid-cols-2 max-w-7xl m-auto mt-10 gap-20">
         <div>
           <SectionHeader title="Programs" moreLink={urls.programs} />
 
@@ -139,6 +169,14 @@ export default function Home() {
               data.courses?.map((course) => (
                 <ProgramCard key={course.id} course={course} />
               ))}
+          </div>
+        </div>
+
+        <div className="space-y-5">
+          {data && data.banners && <BannerSlide banners={data.banners} />}
+          <div>
+            <SectionHeader title="Online Training" moreLink={urls.ot} />
+            <PostList posts={data?.ot || []} urlPrefix={urls.ot} />
           </div>
         </div>
       </div>
