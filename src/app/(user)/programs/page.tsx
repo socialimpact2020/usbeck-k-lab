@@ -18,7 +18,7 @@ export default function Programs() {
       <Suspense fallback={<Loading />}>
         <ProgramSection
           title="IT ACADEMY"
-          subtitle="K-LAB PROGRAMS GUIDE"
+          subtitle="K-LAB PROGRAMS"
           type="sw"
         />
       </Suspense>
@@ -27,7 +27,7 @@ export default function Programs() {
         <Suspense fallback={<Loading />}>
           <ProgramSection
             title="Digital Manufacturing"
-            subtitle="K-LAB PROGRAMS GUIDE"
+            subtitle="K-LAB PROGRAMS"
             type="hw"
           />
         </Suspense>

@@ -141,9 +141,7 @@ export default function EducationPage({
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
-          <h4 className="text-gray-400 text-sm font-bold">
-            K-LAB PROGRAMS GUIDE
-          </h4>
+          <h4 className="text-gray-400 text-sm font-bold">K-LAB PROGRAMS</h4>
           <h2 className="font-bold text-2xl">{subtitle}</h2>
         </div>
 

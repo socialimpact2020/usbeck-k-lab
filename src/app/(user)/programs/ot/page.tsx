@@ -14,7 +14,7 @@ export default function OnlineTraining() {
       title="Online Training"
       depth={["Programs", "Online Training"]}
       imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_programs_banner.webp"
-      guideText="K-LAB PROGRAMS GUIDE"
+      guideText="K-LAB PROGRAMS"
     >
       <OnlineTrainingContent />
     </BoardLayout>

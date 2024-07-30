@@ -50,10 +50,8 @@ export default async function Post({ params }: { params: { id: string } }) {
 
       <SectionWrapper>
         <div className="text-center space-y-2 mb-10">
-          <h4 className="text-gray-400 text-sm font-bold">
-            K-LAB PROGRAMS GUIDE
-          </h4>
-          <h2 className="font-bold text-2xl">{data.type}</h2>
+          <h4 className="text-gray-400 text-sm font-bold">K-LAB PROGRAMS</h4>
+          <h2 className="font-bold text-2xl">Online Training</h2>
         </div>
 
         <PostDetail data={data} />
