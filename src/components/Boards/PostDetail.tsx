@@ -65,7 +65,7 @@ export default function PostDetail({ data }: IPostDetailProps) {
           <h1 className="text-3xl font-bold">{data.title}</h1>
           <div className="min-w-[160px]">
             <p className="text-gray-500 text-right">Views {data.views}</p>
-            <p className="text-gray-500">
+            <p className="text-gray-500 text-right">
               Created {data.createdAt.toString().split("T")[0]}
             </p>
           </div>
