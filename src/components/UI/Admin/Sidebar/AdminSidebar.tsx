@@ -79,7 +79,18 @@ export default function AdminSidebar() {
                     : "text-white"
                 }`}
               >
-                ⦁ &nbsp; Banners Update
+                ⦁ &nbsp; Online Training Banners Update
+              </Link>
+
+              <Link
+                href={urls.dashboardBoardBanners}
+                className={`text-xs ${
+                  isCurrentRoute(urls.dashboardBoardBanners)
+                    ? "text-cyan-500 font-bold"
+                    : "text-white"
+                }`}
+              >
+                ⦁ &nbsp; Board Banners Update
               </Link>
             </div>
           </div>

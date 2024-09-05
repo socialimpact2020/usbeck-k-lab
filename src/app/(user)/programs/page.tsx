@@ -23,7 +23,7 @@ export default function Programs() {
         />
       </Suspense>
 
-      <SectionWrapper className="pt-5">
+      <SectionWrapper className="pt-0">
         <Suspense fallback={<Loading />}>
           <ProgramSection
             title="Digital Manufacturing"

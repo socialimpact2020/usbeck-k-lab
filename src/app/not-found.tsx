@@ -21,7 +21,7 @@ export default function NotFound() {
         />
 
         <p className="text-center text-sm">
-          The Page you are looing for doesn't exist or an other error occured.
+          The Page you are looking for doesn't exist or an other error occurred.
         </p>
         <p className="text-center text-sm">
           Go back, or head over to <strong>nipak-labuzb.co.kr</strong> to choose

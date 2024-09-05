@@ -10,7 +10,7 @@ export async function GET(req: NextRequest, res: NextApiResponse) {
         OR: [{ category: "SW" }, { category: "HW" }],
       },
       orderBy: { createdAt: "desc" },
-      take: 16,
+      take: 8,
       include: { progressPeriod: true, recruitmentPeriod: true },
     });
 

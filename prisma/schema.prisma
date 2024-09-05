@@ -85,3 +85,10 @@ enum Subcategory {
   OpenUp
   SpecialCourse
 }
+
+model BoardBanner {
+  id Int @id @default(autoincrement())
+  bannerImageURL String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

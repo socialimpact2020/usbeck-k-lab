@@ -29,12 +29,22 @@ const DateRange = ({
 const SectionHeader = ({
   title,
   moreLink,
+  subTitle,
 }: {
   title: string;
   moreLink: string;
+  subTitle?: string;
 }) => (
   <div className="flex items-center justify-between border-b-gray-300 border-b-2 pb-1">
-    <p className="text-lg font-semibold">{title}</p>
+    <p className="text-lg font-semibold">
+      {title}
+
+      {subTitle && (
+        <span className="text-gray-400 font-semibold text-sm">
+          <span className="mx-2">|</span> {subTitle}
+        </span>
+      )}
+    </p>
     <div className="flex items-center space-x-2">
       <Link href={moreLink} className="text-md text-gray-500">
         More
@@ -105,7 +115,9 @@ const PostList = ({
         {posts.map((post) => (
           <tr key={post.id}>
             <td className="font-bold">
-              <Link href={`${urlPrefix}/${post.id}`}>
+              <Link
+                href={`/${urlPrefix}/${post.type.toLowerCase()}/${post.id}`}
+              >
                 {post.title.slice(0, 38) + "..."}
               </Link>
             </td>
@@ -125,7 +137,7 @@ const BannerSlide = ({ banners }: { banners: any[] }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [banners.length]);
@@ -162,33 +174,53 @@ export default function Home() {
     <>
       <div className="grid grid-cols-2 max-w-7xl m-auto mt-10 gap-20">
         <div>
-          <SectionHeader title="Programs" moreLink={urls.programs} />
+          <SectionHeader
+            title="Programs"
+            subTitle="IT ACADEMY"
+            moreLink={urls.sw}
+          />
 
           <div className="mt-5 flex mb-5 justify-start gap-8">
             {data &&
-              data.courses?.map((course) => (
+              data.swCourses?.map((course) => (
                 <ProgramCard key={course.id} course={course} />
               ))}
           </div>
         </div>
 
-        <div className="space-y-5">
-          {data && data.banners && <BannerSlide banners={data.banners} />}
-          <div>
-            <SectionHeader title="Online Training" moreLink={urls.ot} />
-            <PostList posts={data?.ot || []} urlPrefix={urls.ot} />
+        <div>
+          <SectionHeader
+            title="Programs"
+            subTitle="Digital Manufacturing"
+            moreLink={urls.hw}
+          />
+
+          <div className="mt-5 flex mb-5 justify-start gap-8">
+            {data &&
+              data.hwCourses?.map((course) => (
+                <ProgramCard key={course.id} course={course} />
+              ))}
           </div>
         </div>
       </div>
 
       <div className="grid grid-cols-2 max-w-7xl m-auto mt-20 gap-20">
-        <div>
+        <div className="space-y-5">
+          {data && data.banners && <BannerSlide banners={data.banners} />}
+          <div>
+            <SectionHeader title="Online Training" moreLink={urls.ot} />
+            <PostList posts={data?.ot || []} urlPrefix="programs" />
+          </div>
+        </div>
+        {/* <div>
           <SectionHeader title="Notice" moreLink={urls.notice} />
           <PostList posts={data?.notices || []} urlPrefix={urls.notice} />
-        </div>
-        <div>
-          <SectionHeader title="News" moreLink={urls.news} />
-          <PostList posts={data?.news || []} urlPrefix={urls.news} />
+        </div> */}
+        <div className="">
+          {data && data.boardBanners && <BannerSlide banners={data.boardBanners} />}
+          <div className="mt-[20px]" />
+          <SectionHeader title="News & Notice" moreLink={urls.notice} />
+          <PostList posts={data?.boards || []} urlPrefix="boards" />
         </div>
       </div>
     </>

@@ -9,7 +9,10 @@ import { Banner } from "@prisma/client";
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const useBannerManagement = () => {
-  const { data: banners, mutate } = useSWR<Banner[]>("/api/banners", fetcher);
+  const { data: banners, mutate } = useSWR<Banner[]>(
+    "/api/boardBanners",
+    fetcher
+  );
 
   const addBanner = async (file: File) => {
     if (banners && banners.length >= 5) {
@@ -29,7 +32,7 @@ const useBannerManagement = () => {
 
     const bannerImageURL = `https://d2p8484c990lgc.cloudfront.net/KLAB/${fileName}`;
 
-    await fetch("/api/banners", {
+    await fetch("/api/boardBanners", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ bannerImageURL }),
@@ -52,7 +55,7 @@ const useBannerManagement = () => {
 
     const bannerImageURL = `https://d2p8484c990lgc.cloudfront.net/KLAB/${fileName}`;
 
-    const response = await fetch("/api/banners", {
+    const response = await fetch("/api/boardBanners", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id, bannerImageURL }),
@@ -66,7 +69,7 @@ const useBannerManagement = () => {
   };
 
   const deleteBanner = async (id: number) => {
-    const response = await fetch("/api/banners", {
+    const response = await fetch("/api/boardBanners", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id }),
@@ -144,7 +147,7 @@ export default function DashboardBannerList() {
     <div className="w-full">
       <div className="max-w-2xl mx-auto mt-10">
         <div className="mb-5">
-          <h1 className="font-bold text-3xl mb-10">Online Training Banner</h1>
+          <h1 className="font-bold text-3xl mb-10">Board Banner</h1>
           <input
             type="file"
             onChange={handleFileChange}

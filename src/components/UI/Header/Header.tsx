@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "@/images/logo.png";
+import logo from "@/images/new-logo.png";
 import HeaderLeftLogo from "@/images/header_left_logo2.png";
 import HeaderRightLogo from "@/images/footer_right_logo2.png";
 import Link from "next/link";

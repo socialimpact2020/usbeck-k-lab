@@ -19,11 +19,12 @@ interface IBanners {
 }
 export interface IResponseMain {
   ok: boolean;
-  courses: CourseDetail[];
-  notices: IPostShorts[];
-  news: IPostShorts[];
+  swCourses: CourseDetail[];
+  hwCourses: CourseDetail[];
+  boards: IPostShorts[];
   ot: IPostShorts[];
   banners: IBanners[];
+  boardBanners: IBanners[];
 }
 
 export default function useShorts() {
