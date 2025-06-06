@@ -13,7 +13,7 @@ interface BoardContentProps {
   };
   data: IResponsePosts | undefined;
   isLoading: boolean;
-  handleSubmit: UseFormHandleSubmit<ISearchForm, undefined>;
+  handleSubmit: UseFormHandleSubmit<ISearchForm>;
   register: UseFormRegister<ISearchForm>;
   handlePreviousPage: () => void;
   handleNextPage: () => void;
