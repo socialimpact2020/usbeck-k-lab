@@ -64,15 +64,22 @@ export async function fetchProgramData(
   try {
     const baseUrl =
       process.env.NEXT_PUBLIC_API_URL || "https://www.nipak-labuzb.co.kr";
+
+     
     const response = await fetch(`${baseUrl}/api/edu/${id}`, {
       next: { revalidate: 60 },
     });
+
+ 
+
+    
 
     if (!response.ok) {
       throw new Error("Failed to fetch program data");
     }
 
     const data: ProgramResponse = await response.json();
+ 
     return data;
   } catch (error) {
     console.error("Error fetching program data:", error);

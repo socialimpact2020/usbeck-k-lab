@@ -40,7 +40,7 @@ export default function Card({
         </h3>
         <div className="mt-auto space-y-1">
           <div className="flex text-xs text-gray-400">
-            <span className="w-20 flex-shrink-0">모집기간:</span>
+            <span className="w-20 flex-shrink-0">Application Period:</span>
             <span className="flex-grow grid grid-cols-[1fr,auto,1fr] gap-1">
               <span>{formatDate(recruitmentPeriod.startDate)}</span>
               <span>~</span>
@@ -50,7 +50,7 @@ export default function Card({
             </span>
           </div>
           <div className="flex text-xs text-gray-400">
-            <span className="w-20 flex-shrink-0">교육기간:</span>
+            <span className="w-20 flex-shrink-0">Training Period:</span>
             <span className="flex-grow grid grid-cols-[1fr,auto,1fr] gap-1">
               <span>{formatDate(progressPeriod.startDate)}</span>
               <span>~</span>

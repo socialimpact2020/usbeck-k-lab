@@ -84,14 +84,20 @@ const ProgramCard = ({ course }: { course: any }) => (
       />
       <h3 className="font-bold my-3">{course.title.slice(0, 25) + "..."}</h3>
       <h3 className="text-xs flex text-gray-400 whitespace-nowrap overflow-hidden">
-        <span className="flex-shrink-0">모집 기간 | &nbsp;</span>
+        <span className="flex-shrink-0 w-[108px] flex justify-between">
+          <span>Application Period</span>
+          <span>| &nbsp;</span>
+        </span>
         <DateRange
           startDate={course.recruitmentPeriod.startDate}
           endDate={course.recruitmentPeriod.endDate}
         />
       </h3>
       <h3 className="text-xs flex text-gray-400 whitespace-nowrap overflow-hidden">
-        <span className="flex-shrink-0">진행 기간 | &nbsp;</span>
+        <span className="flex-shrink-0 w-[108px] flex justify-between">
+          <span>Training Period</span>
+          <span> | &nbsp;</span>
+        </span>
         <DateRange
           startDate={course.progressPeriod.startDate}
           endDate={course.progressPeriod.endDate}

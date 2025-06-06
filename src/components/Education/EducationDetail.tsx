@@ -95,14 +95,14 @@ export default function EducationDetail({ programData }: EducationDetailProps) {
 
               <div>
                 <p>
-                  모집 기간 &nbsp; | &nbsp;{" "}
+                  Application Period &nbsp; | &nbsp;{" "}
                   <span className="font-bold">
                     {data.recruitmentPeriod.startDate.toString().split("T")[0]}{" "}
                     ~ {data.recruitmentPeriod.endDate.toString().split("T")[0]}
                   </span>
                 </p>
                 <p>
-                  진행 기간 &nbsp; | &nbsp;{" "}
+                  Training Period &nbsp; | &nbsp;{" "}
                   <span className="font-bold">
                     {data.progressPeriod.startDate.toString().split("T")[0]} ~{" "}
                     {data.progressPeriod.endDate.toString().split("T")[0]}
