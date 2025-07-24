@@ -16,7 +16,10 @@ export async function generateMetadata({
     };
   }
 
+  
+
   const programData = response.courseDetail;
+  console.log("??")
 
   return {
     title: `${programData.title} - K-LAB IT ACADEMY`,

@@ -45,58 +45,57 @@ interface ISearchForm {
 const usePaginationSearch = (boardType: "notice" | "news" | "ot") => {
   const router = useRouter();
   const searchParams = useSearchParams();
+
   const initialPage = Number(searchParams.get("page")) || 1;
+  const searchValue = searchParams.get("search") || "";
+
   const [state, dispatch] = useReducer(reducer, {
     currentPage: initialPage,
   });
 
-  const { data, isLoading } = usePosts(
-    boardType,
-    searchParams.get("search") || ""
-  );
-
+  const { data, isLoading } = usePosts(boardType, searchValue);
   const { handleSubmit, register, setValue } = useForm<ISearchForm>();
 
   useEffect(() => {
-    const scrollPosition = window.scrollY;
-
-    if (data) {
-      router.push(
-        `?page=${state.currentPage}&search=${searchParams.get("search") || ""}`,
-        { scroll: false }
-      );
-    }
-
-    window.scrollTo(0, scrollPosition);
-  }, [state.currentPage, data]);
+    setValue("search", searchValue);
+  }, [searchParams]);
 
   useEffect(() => {
-    setValue("search", searchParams.get("search") || "");
-  }, []);
+    const currentQueryPage = Number(searchParams.get("page")) || 1;
+    const currentQuerySearch = searchParams.get("search") || "";
+
+    if (
+      currentQueryPage !== state.currentPage ||
+      currentQuerySearch !== searchValue
+    ) {
+      const scrollPosition = window.scrollY;
+      router.push(
+        `?page=${state.currentPage}&search=${currentQuerySearch}`,
+        { scroll: false }
+      );
+      window.scrollTo(0, scrollPosition);
+    }
+  }, [state.currentPage]);
 
   const handlePreviousPage = () => {
     if (data) {
-      dispatch({ type: "PREVIOUS_PAGE", totalPage: data?.totalPage });
+      dispatch({ type: "PREVIOUS_PAGE", totalPage: data.totalPage });
     }
   };
 
   const handleNextPage = () => {
     if (data) {
-      dispatch({ type: "NEXT_PAGE", totalPage: data?.totalPage });
+      dispatch({ type: "NEXT_PAGE", totalPage: data.totalPage });
     }
   };
 
   const handlePageClick = (page: number) => {
-    dispatch({ type: "MOVE_PAGE", page, totalPage: data?.totalPage });
+    dispatch({ type: "MOVE_PAGE", page });
   };
 
   const handleSearch = ({ search }: ISearchForm) => {
     dispatch({ type: "MOVE_PAGE", page: 1 });
-
     router.push(`?page=1&search=${search}`);
-    setTimeout(() => {
-      router.push(`?page=1&search=${search}`);
-    }, 0);
   };
 
   return {
