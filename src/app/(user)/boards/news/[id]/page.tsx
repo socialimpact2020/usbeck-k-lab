@@ -24,7 +24,15 @@ export async function generateMetadata(
   const description = post?.content
     ? stripHtml(post.content).substring(0, 160)
     : "News Detail";
-  const image = "https://d2p8484c990lgc.cloudfront.net/KLAB/klab_board_banner.webp";
+
+  const getFirstImageSrc = (html: string): string | null => {
+    const match = html.match(/<img[^>]+src=["']?([^"'>\s]+)["']?[^>]*>/i);
+    return match ? match[1] : null;
+  };
+
+  const contentImage = post?.content ? getFirstImageSrc(post.content) : null;
+  const image =
+    contentImage || "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png";
 
   const pageUrl = `https://www.klabuzb.com/boards/news/${id}`;
 
@@ -38,9 +46,7 @@ export async function generateMetadata(
       siteName: "K LAB Uzbekistan",
       title: post?.title || "News",
       description,
-      images: [
-        { url: image, width: 1200, height: 630, alt: post?.title || "News Detail" },
-      ],
+      images: [{ url: image }],
     },
     twitter: {
       card: "summary_large_image",
@@ -63,6 +69,15 @@ export default async function Post({ params }: Props) {
   const description = data?.content
     ? data.content.replace(/<[^>]*>?/gm, "").substring(0, 160)
     : undefined;
+  const getFirstImageSrc = (html: string): string | null => {
+    const match = html.match(/<img[^>]+src=["']?([^"'>\s]+)["']?[^>]*>/i);
+    return match ? match[1] : null;
+  };
+  const image = data?.content
+    ? getFirstImageSrc(data.content) ||
+      "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png"
+    : "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png";
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -73,6 +88,7 @@ export default async function Post({ params }: Props) {
     author: { "@type": "Organization", name: "K LAB Uzbekistan" },
     publisher: { "@type": "Organization", name: "K LAB Uzbekistan" },
     mainEntityOfPage: pageUrl,
+    image,
   };
 
   return (
