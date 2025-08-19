@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "By supporting K_LAB applying Korea's advanced technologies and systems, Uzbekistan will strengthen its national technical manpower capabilities and create economic opportunities in the ICT sector",
   openGraph: {
     title: "Uzbekistan K_LAB",
-    url: "https://www.nipak-labuzb.co.kr",
+    url: "https://www.klabuzb.com",
     type: "website",
     images: "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png",
   },

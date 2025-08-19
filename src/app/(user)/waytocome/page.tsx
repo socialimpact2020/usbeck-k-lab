@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Sharkhrisabz Street, 25, Mirabod district, Tashkent city, Uzbekistan (basement)",
   openGraph: {
     title: "Way to come",
-    url: "https://www.nipak-labuzb.co.kr/waytocome",
+    url: "https://www.klabuzb.com/waytocome",
     type: "website",
     images: [
       {

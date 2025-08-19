@@ -8,7 +8,7 @@ import { SessionProvider } from "next-auth/react";
 import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nipak-labuzb.co.kr"),
+  metadataBase: new URL("https://www.klabuzb.com"),
   title: "Uzbekistan K_LAB ",
   description: "Uzbekistan K_LAB ",
 };
