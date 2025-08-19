@@ -5,19 +5,33 @@ import SectionWrapper from "@/components/UI/SectionWrapper";
 import Wayto from "@/components/client/Wayto";
 
 export const metadata: Metadata = {
-  title: `Way to come | Uzbekistan K_LAB`,
+  title: "Way to come",
   description:
-    "Sharkhrisabz Street, 25, Mirabod district, Tashkent city, Uzbekistan (basement)",
+    "Sharkhrisabz Street 25, Mirabod district, Tashkent, Uzbekistan (basement). Find directions to K LAB Uzbekistan.",
+  alternates: { canonical: "/waytocome" },
   openGraph: {
-    title: "Way to come",
-    url: "https://www.klabuzb.com/waytocome",
     type: "website",
+    url: "https://www.klabuzb.com/waytocome",
+    siteName: "K LAB Uzbekistan",
+    title: "Way to come",
+    description:
+      "Sharkhrisabz Street 25, Mirabod district, Tashkent, Uzbekistan (basement). Find directions to K LAB Uzbekistan.",
     images: [
       {
         url: "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
+        alt: "K LAB Uzbekistan",
       },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Way to come",
+    description:
+      "Sharkhrisabz Street 25, Mirabod district, Tashkent, Uzbekistan (basement). Find directions to K LAB Uzbekistan.",
+    images: [
+      "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png",
     ],
   },
 };

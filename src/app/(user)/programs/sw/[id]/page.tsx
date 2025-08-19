@@ -46,5 +46,20 @@ export async function generateMetadata({
 }
 
 export default function ProgramDetail({ params }: { params: { id: string } }) {
-  return <ProgramDetailPage id={params.id} programType="sw" />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    provider: { "@type": "Organization", name: "K LAB Uzbekistan" },
+    name: "IT ACADEMY",
+    url: `https://www.klabuzb.com/programs/sw/${params.id}`,
+  };
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ProgramDetailPage id={params.id} programType="sw" />
+    </>
+  );
 }

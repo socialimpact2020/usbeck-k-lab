@@ -8,7 +8,12 @@ interface IResponsePostDetail {
 export async function getPostDetail(id: string): Promise<Post | null> {
   try {
     const baseUrl =
-      process.env.NEXT_PUBLIC_API_URL || "https://www.klabuzb.com";
+      typeof window !== "undefined"
+        ? ""
+        : process.env.NEXT_PUBLIC_API_URL ||
+          (process.env.NODE_ENV === "production"
+            ? "https://www.klabuzb.com"
+            : "http://localhost:3000");
     const response = await fetch(`${baseUrl}/api/post/detail/${id}`, {
       next: { revalidate: 60 },
     });
@@ -63,7 +68,12 @@ export async function fetchProgramData(
 ): Promise<ProgramResponse | null> {
   try {
     const baseUrl =
-      process.env.NEXT_PUBLIC_API_URL || "https://www.klabuzb.com";
+      typeof window !== "undefined"
+        ? ""
+        : process.env.NEXT_PUBLIC_API_URL ||
+          (process.env.NODE_ENV === "production"
+            ? "https://www.klabuzb.com"
+            : "http://localhost:3000");
 
      
     const response = await fetch(`${baseUrl}/api/edu/${id}`, {

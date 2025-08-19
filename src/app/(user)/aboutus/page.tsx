@@ -6,26 +6,38 @@ import SectionWrapper from "@/components/UI/SectionWrapper";
 import AboutLeftImage from "@/images/about_img1.png";
 import AboutRightImage from "@/images/about_img2.png";
 
-// 메타데이터 상수
-const META_DATA: Metadata = {
-  title: `About US | Uzbekistan K_LAB`,
+// 메타데이터
+export const metadata: Metadata = {
+  title: "About Us",
   description:
-    "By supporting K_LAB applying Korea's advanced technologies and systems, Uzbekistan will strengthen its national technical manpower capabilities and create economic opportunities in the ICT sector",
+    "Learn about K LAB Uzbekistan's mission and ecosystem connecting SW-Lab and Prototype production-Lab to power digital innovation.",
+  alternates: { canonical: "/aboutus" },
   openGraph: {
-    title: "Uzbekistan K_LAB",
-    url: "https://www.klabuzb.com/aboutus",
     type: "website",
+    url: "https://www.klabuzb.com/aboutus",
+    siteName: "K LAB Uzbekistan",
+    title: "About Us",
+    description:
+      "Learn about K LAB Uzbekistan's mission and ecosystem connecting SW-Lab and Prototype production-Lab to power digital innovation.",
     images: [
       {
         url: "https://d2p8484c990lgc.cloudfront.net/KLAB/next/about_img3.png",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
+        alt: "About K LAB Uzbekistan",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us",
+    description:
+      "Learn about K LAB Uzbekistan's mission and ecosystem connecting SW-Lab and Prototype production-Lab to power digital innovation.",
+    images: [
+      "https://d2p8484c990lgc.cloudfront.net/KLAB/next/about_img3.png",
+    ],
+  },
 };
-
-export const metadata = META_DATA;
 
 // 소개 텍스트 컴포넌트
 const IntroText: React.FC = () => (

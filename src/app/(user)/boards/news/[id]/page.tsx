@@ -24,10 +24,30 @@ export async function generateMetadata(
   const description = post?.content
     ? stripHtml(post.content).substring(0, 160)
     : "News Detail";
+  const image = "https://d2p8484c990lgc.cloudfront.net/KLAB/klab_board_banner.webp";
+
+  const pageUrl = `https://www.klabuzb.com/boards/news/${id}`;
 
   return {
     title: post?.title || "News",
-    description: description,
+    description,
+    alternates: { canonical: `/boards/news/${id}` },
+    openGraph: {
+      type: "article",
+      url: pageUrl,
+      siteName: "K LAB Uzbekistan",
+      title: post?.title || "News",
+      description,
+      images: [
+        { url: image, width: 1200, height: 630, alt: post?.title || "News Detail" },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post?.title || "News",
+      description,
+      images: [image],
+    },
   };
 }
 
@@ -39,8 +59,28 @@ export default async function Post({ params }: Props) {
     notFound();
   }
 
+  const pageUrl = `https://www.klabuzb.com/boards/news/${id}`;
+  const description = data?.content
+    ? data.content.replace(/<[^>]*>?/gm, "").substring(0, 160)
+    : undefined;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: data?.title,
+    description,
+    datePublished: data?.createdAt,
+    dateModified: data?.updatedAt,
+    author: { "@type": "Organization", name: "K LAB Uzbekistan" },
+    publisher: { "@type": "Organization", name: "K LAB Uzbekistan" },
+    mainEntityOfPage: pageUrl,
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <CurrentSection
         text="News"
         imageUrl="https://d2p8484c990lgc.cloudfront.net/KLAB/klab_board_banner.webp"

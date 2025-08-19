@@ -16,14 +16,22 @@ import Home from "@/components/client/Home";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: `Home | Uzbekistan K_LAB`,
+
+  title: "Home | K LAB Uzbekistan",
   description:
-    "By supporting K_LAB applying Korea's advanced technologies and systems, Uzbekistan will strengthen its national technical manpower capabilities and create economic opportunities in the ICT sector",
+    "Bu Koreya Respublikasining Rasmiy Taraqqiyot Yordami (ODA) doirasida amalga oshirilayotgan bepul AKT (Axborot-kommunikatsiya texnologiyalari) ta’lim loyihasidir.",
   openGraph: {
-    title: "Uzbekistan K_LAB",
+    title: "K LAB Uzbekistan",
     url: "https://www.klabuzb.com",
     type: "website",
-    images: "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png",
+    images: [
+      {
+        url: "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "K LAB Uzbekistan",
+      },
+    ],
   },
 };
 
