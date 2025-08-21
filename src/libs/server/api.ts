@@ -12,7 +12,7 @@ export async function getPostDetail(id: string): Promise<Post | null> {
         ? ""
         : process.env.NEXT_PUBLIC_API_URL ||
           (process.env.NODE_ENV === "production"
-            ? "https://www.klabuzb.com"
+            ? "https://www.klabuz.com"
             : "http://localhost:3000");
     const response = await fetch(`${baseUrl}/api/post/detail/${id}`, {
       next: { revalidate: 60 },
@@ -72,7 +72,7 @@ export async function fetchProgramData(
         ? ""
         : process.env.NEXT_PUBLIC_API_URL ||
           (process.env.NODE_ENV === "production"
-            ? "https://www.klabuzb.com"
+            ? "https://www.klabuz.com"
             : "http://localhost:3000");
 
      

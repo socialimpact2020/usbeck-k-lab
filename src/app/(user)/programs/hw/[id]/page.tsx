@@ -48,7 +48,7 @@ export default function ProgramDetail({ params }: { params: { id: string } }) {
     "@type": "Course",
     provider: { "@type": "Organization", name: "K LAB Uzbekistan" },
     name: "Digital Manufacturing",
-    url: `https://www.klabuzb.com/programs/hw/${params.id}`,
+    url: `https://www.klabuz.com/programs/hw/${params.id}`,
   };
   return (
     <>

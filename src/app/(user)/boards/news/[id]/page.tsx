@@ -34,7 +34,7 @@ export async function generateMetadata(
   const image =
     contentImage || "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png";
 
-  const pageUrl = `https://www.klabuzb.com/boards/news/${id}`;
+  const pageUrl = `https://www.klabuz.com/boards/news/${id}`;
 
   return {
     title: post?.title || "News",
@@ -65,7 +65,7 @@ export default async function Post({ params }: Props) {
     notFound();
   }
 
-  const pageUrl = `https://www.klabuzb.com/boards/news/${id}`;
+  const pageUrl = `https://www.klabuz.com/boards/news/${id}`;
   const description = data?.content
     ? data.content.replace(/<[^>]*>?/gm, "").substring(0, 160)
     : undefined;

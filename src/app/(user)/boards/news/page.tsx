@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/boards/news" },
   openGraph: {
     type: "website",
-    url: "https://www.klabuzb.com/boards/news",
+    url: "https://www.klabuz.com/boards/news",
     siteName: "K LAB Uzbekistan",
     title: "News",
     description: "Latest news and updates from K LAB Uzbekistan.",

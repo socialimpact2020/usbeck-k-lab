@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "Bu Koreya Respublikasining Rasmiy Taraqqiyot Yordami (ODA) doirasida amalga oshirilayotgan bepul AKT (Axborot-kommunikatsiya texnologiyalari) ta’lim loyihasidir.",
   openGraph: {
     title: "K LAB Uzbekistan",
-    url: "https://www.klabuzb.com",
+    url: "https://www.klabuz.com",
     type: "website",
     images: [
       {

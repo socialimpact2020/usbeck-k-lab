@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/waytocome" },
   openGraph: {
     type: "website",
-    url: "https://www.klabuzb.com/waytocome",
+    url: "https://www.klabuz.com/waytocome",
     siteName: "K LAB Uzbekistan",
     title: "Way to come",
     description:

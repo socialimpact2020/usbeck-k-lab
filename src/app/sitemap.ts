@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.klabuzb.com";
+  const baseUrl = "https://www.klabuz.com";
 
   // 정적 페이지들 (필요시 확장)
   const staticPaths = [

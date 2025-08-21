@@ -33,7 +33,7 @@ export async function generateMetadata(
   const image =
     contentImage || "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png";
 
-  const pageUrl = `https://www.klabuzb.com/boards/notice/${id}`;
+  const pageUrl = `https://www.klabuz.com/boards/notice/${id}`;
 
   return {
     title: post?.title || "Notice",
@@ -64,7 +64,7 @@ export default async function Post({ params }: { params: { id: string } }) {
     notFound();
   }
 
-  const pageUrl = `https://www.klabuzb.com/boards/notice/${id}`;
+  const pageUrl = `https://www.klabuz.com/boards/notice/${id}`;
   const description = data?.content
     ? data.content.replace(/<[^>]*>?/gm, "").substring(0, 160)
     : undefined;

@@ -9,7 +9,7 @@ import { Providers } from "@/components/Providers";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.klabuzb.com"),
+  metadataBase: new URL("https://www.klabuz.com"),
   title: {
     default: "K LAB Uzbekistan",
     template: "%s | K LAB Uzbekistan",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://www.klabuzb.com",
+    url: "https://www.klabuz.com",
     siteName: "K LAB Uzbekistan",
     title: "K LAB Uzbekistan",
     description:
@@ -91,7 +91,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "K LAB Uzbekistan",
               alternateName: "Uzbekistan K_LAB",
-              url: "https://www.klabuzb.com",
+              url: "https://www.klabuz.com",
               logo:
                 "https://d2p8484c990lgc.cloudfront.net/KLAB/next/logo.png",
             })}
@@ -105,11 +105,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "K LAB Uzbekistan",
-              url: "https://www.klabuzb.com",
+              url: "https://www.klabuz.com",
               inLanguage: "uz-UZ",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://www.klabuzb.com/search?q={search_term_string}",
+                target: "https://www.klabuz.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             })}

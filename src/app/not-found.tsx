@@ -24,7 +24,7 @@ export default function NotFound() {
           The Page you are looking for doesn't exist or an other error occurred.
         </p>
         <p className="text-center text-sm">
-          Go back, or head over to <strong>www.klabuzb.com</strong> to choose
+          Go back, or head over to <strong>www.klabuz.com</strong> to choose
           a new direction.
         </p>
       </div>

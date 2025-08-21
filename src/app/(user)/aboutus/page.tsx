@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/aboutus" },
   openGraph: {
     type: "website",
-    url: "https://www.klabuzb.com/aboutus",
+    url: "https://www.klabuz.com/aboutus",
     siteName: "K LAB Uzbekistan",
     title: "About Us",
     description:

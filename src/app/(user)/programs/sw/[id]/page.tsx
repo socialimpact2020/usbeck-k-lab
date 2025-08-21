@@ -51,7 +51,7 @@ export default function ProgramDetail({ params }: { params: { id: string } }) {
     "@type": "Course",
     provider: { "@type": "Organization", name: "K LAB Uzbekistan" },
     name: "IT ACADEMY",
-    url: `https://www.klabuzb.com/programs/sw/${params.id}`,
+    url: `https://www.klabuz.com/programs/sw/${params.id}`,
   };
   return (
     <>
